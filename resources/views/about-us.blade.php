@@ -12,7 +12,7 @@
 			<h1 class="aboutus-intro__head-text big-title">About Us</h1>
 			<div class="aboutus-intro__breadcrumbs-container">
 				<div class="aboutus-intro__breadcrumbs">
-					<a href="/index.php"><span class="aboutus-intro__breadcrumbs-home">Home</span></a>
+					<a href="/"><span class="aboutus-intro__breadcrumbs-home">Home</span></a>
 					<span class="aboutus-intro__breadcrumbs-separator">&nbsp|&nbsp</span>
 					<span class="aboutus-intro__breadcrumbs-about">About</span>
 				</div>
