@@ -15,9 +15,12 @@ use App\Http\Controllers\RoomController;
 */
 
 Route::get('/', [RoomController::class, 'index'])->name('index');
+
 Route::get('/about-us', function () {
     return view('about-us');
 })->name('about-us');
-Route::get('/rooms', [RoomController::class, 'rooms'])->name('index');
+
+Route::get('/rooms', [RoomController::class, 'rooms'])->name('rooms');
+
 // Route::get('/offers', [RoomController::class, 'index'])->name('index');
 // Route::get('/contact', [RoomController::class, 'index'])->name('index');
