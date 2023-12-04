@@ -169,11 +169,22 @@
 <script type="module" src="{{ URL::asset('js/index.js'); }}"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
+
+@if ($errors->any())
+@php ($error = true);
+@php ($confirmation = []);
+@foreach ($errors->all() as $error) {
+@php (array_push($confirmation, $error));
+}
+@endforeach
+@endif
+
 @if (isset($confirmation) && $confirmation !== '')
+@foreach ($confirmation as $message)
 <script>
     Toastify({
-        text: "{{$confirmation}}",
-        duration: 3000,
+        text: "{{$message}}",
+        duration: 5000,
         gravity: "bottom",
         position: "left",
         style: {
@@ -184,6 +195,7 @@
         }
     }).showToast();
 </script>
+@endforeach
 @endif
 
 </html>
