@@ -47,7 +47,6 @@ class RoomController extends Controller
                 )
                 ->get();
         } else {
-            echo 'hola';
             $rooms = Rooms
                 ::join('photo', 'room.id', '=', 'photo.room_id')
                 ->select('room.*', 'photo.URL')
