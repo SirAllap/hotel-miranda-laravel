@@ -14,7 +14,7 @@
 			</h1>
 			<div class="contact-intro__breadcrumbs-container">
 				<div class="contact-intro__breadcrumbs">
-					<a href="/index.php"><span class="contact-intro__breadcrumbs-home">Home</span></a>
+					<a href="/"><span class="contact-intro__breadcrumbs-home">Home</span></a>
 					<span class="contact-intro__breadcrumbs-separator">&nbsp|&nbsp</span>
 					<span class="contact-intro__breadcrumbs-about">Blog</span>
 				</div>
