@@ -1,0 +1,53 @@
+.home-facilities {
+    margin-bottom: 60px;
+    &__text-container {
+        margin-bottom: 60px;
+        h4 {
+            margin-bottom: 20px;
+        }
+        text-align: center;
+    }
+    @include desktop {
+        flex-wrap: wrap !important;
+        max-width: 1000px;
+        max-height: 911px;
+        margin: 0 auto;
+        padding: 0;
+    }
+    @include xl {
+        .swiper-wrapper {
+            flex-wrap: wrap;
+        }
+        flex-wrap: wrap !important;
+        max-width: 1188px;
+        max-height: 911px;
+        margin: 0 auto;
+        padding: 0;
+    }
+}
+
+.swiper-slide-card {
+    @include desktop {
+        transition: all 0.5s !important;
+        &:hover {
+            scale: 1.05;
+        }
+        margin: 0;
+        padding: 0;
+        height: 299px !important;
+        width: 320px !important;
+    }
+    @include xl {
+        margin: 0;
+        padding: 0;
+        height: 349px !important;
+        width: 370px !important;
+    }
+}
+
+.swiper-pagination {
+    @include xl {
+        --swiper-pagination-color: transparent;
+        --swiper-pagination-bullet-inactive-opacity: 0;
+    }
+}

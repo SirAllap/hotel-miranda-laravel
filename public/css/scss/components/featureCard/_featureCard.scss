@@ -1,0 +1,114 @@
+.general-features-card {
+    padding: 30px;
+    margin-bottom: 20px;
+    @include desktop {
+        margin: 10px !important;
+    }
+    &__features-left-img {
+        width: 70px;
+        height: 70px;
+        margin-top: 60px;
+        object-fit: contain;
+        @include desktop {
+            margin: 30px 0 0 30px;
+        }
+        @include xl {
+            margin: 60px 0 0 60px;
+        }
+    }
+    &__features-card-text {
+        margin: 0 auto;
+        width: 80%;
+        h4 {
+            margin-top: 20px;
+            font-size: 30px;
+        }
+        p {
+            margin-top: 10px;
+            color: $color-softGreyText;
+        }
+        @include desktop {
+            h4 {
+                margin-top: 0px;
+                font-size: 30px;
+            }
+            p {
+                margin-top: 0px;
+                color: $color-softGreyText;
+            }
+        }
+    }
+}
+.rating {
+    background: url("../../images/assets/images/features/bg_numbers/01.png"), $color-white;
+    background-repeat: no-repeat;
+    background-position-y: 5%;
+    background-position-x: 95%;
+}
+.clock {
+    background: url("../../images/assets/images/features/bg_numbers/02.png"), $color-white;
+    background-repeat: no-repeat;
+    background-position-y: 5%;
+    background-position-x: 95%;
+}
+.pointer {
+    background: url("../../images/assets/images/features/bg_numbers/03.png"), $color-white;
+    background-repeat: no-repeat;
+    background-position-y: 5%;
+    background-position-x: 95%;
+}
+.clock-stop {
+    background: url("../../images/assets/images/features/bg_numbers/04.png"), $color-white;
+    background-repeat: no-repeat;
+    background-position-y: 5%;
+    background-position-x: 95%;
+}
+.credit-card {
+    background: url("../../images/assets/images/features/bg_numbers/05.png"), $color-white;
+    background-repeat: no-repeat;
+    background-position-y: 5%;
+    background-position-x: 95%;
+}
+.award {
+    background: url("../../images/assets/images/features/bg_numbers/06.png"), $color-white;
+    background-repeat: no-repeat;
+    background-position-y: 5%;
+    background-position-x: 95%;
+}
+
+.rating-black {
+    background: url("../../images/assets/images/features/bg_numbers/01_black.png"), $color-blackCardBack;
+    background-repeat: no-repeat;
+    background-position-y: 5%;
+    background-position-x: 95%;
+}
+.clock-black {
+    background: url("../../images/assets/images/features/bg_numbers/02_black.png"), $color-blackCardBack;
+    background-repeat: no-repeat;
+    background-position-y: 5%;
+    background-position-x: 95%;
+}
+.pointer-black {
+    background: url("../../images/assets/images/features/bg_numbers/03_black.png"), $color-blackCardBack;
+    background-repeat: no-repeat;
+    background-position-y: 5%;
+    background-position-x: 95%;
+}
+.clock-stop-black {
+    background: url("../../images/assets/images/features/bg_numbers/04_black.png"), $color-blackCardBack;
+    background-repeat: no-repeat;
+    background-position-y: 5%;
+    background-position-x: 95%;
+}
+.credit-card-black {
+    background: url("../../images/assets/images/features/bg_numbers/05_black.png"), $color-blackCardBack;
+    background-repeat: no-repeat;
+    background-position-y: 5%;
+    background-position-x: 95%;
+}
+.award-black {
+    background: url("../../images/assets/images/features/bg_numbers/06_black.png"), $color-blackCardBack;
+    background-repeat: no-repeat;
+    background-position-y: 5%;
+    background-position-x: 95%;
+}

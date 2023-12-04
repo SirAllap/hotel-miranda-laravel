@@ -1,0 +1,226 @@
+//! icons
+.material-symbols-outlined {
+    font-variation-settings:
+        "FILL" 0,
+        "wght" 300,
+        "GRAD" 20,
+        "opsz" 25;
+}
+.lock {
+    min-width: 100%;
+    height: 100px;
+    background-color: $color-strongerGreyBack;
+    h3 {
+        color: #fff;
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        max-width: 1420px;
+        padding-top: 15px;
+        margin: 0 auto;
+    }
+}
+.header {
+    margin: 0 auto;
+    z-index: 11;
+    position: fixed;
+    top: 0;
+    background-color: $color-white;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+    @include desktop {
+        margin-top: 40px;
+        max-width: 1220px;
+        height: 120px;
+        background-color: white;
+        margin-left: 50%;
+        transform: translate(-50%, 0);
+        transition: 0.3s all;
+        &--desktop {
+            margin-top: 40px;
+        }
+        &--hide-on-top {
+            margin-top: -150px;
+        }
+    }
+    @include xl {
+        margin-top: 40px;
+        max-width: 1420px;
+        height: 120px;
+        background-color: white;
+        margin-left: 50%;
+        transform: translate(-50%, 0);
+        &--desktop {
+            margin-top: 40px;
+        }
+        &--hide-on-top {
+            margin-top: -150px;
+        }
+    }
+    &__drop-down-menu {
+        @include desktop {
+            display: none;
+        }
+    }
+    &__mobile-left-items {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 50vw;
+        @include desktop {
+            width: 67%;
+        }
+    }
+    &__desktop-menu {
+        display: none;
+        font-family: $arch-font;
+        font-size: 16px;
+        width: 388px;
+        @include desktop {
+            display: block;
+        }
+    }
+    &__desktop-menu-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 450px;
+        height: 100%;
+    }
+    &__desktop-menu-list-item {
+        margin-right: 40px;
+        list-style-type: none;
+        transition: 0.3s all;
+        a {
+            text-decoration: none;
+            color: black;
+            line-height: 2.5;
+            font-weight: 600;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            padding: 0 5px 10px 5px;
+            transition: 0.3s all;
+        }
+        a:hover {
+            border-bottom: 2px solid $color-softGreyText1;
+            color: $color-ligthGrayDisable;
+        }
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+    &__desktop-menu-list-item :last-child {
+        margin-right: 0;
+    }
+    &__mobile-burger-icon {
+        display: block;
+        cursor: pointer;
+        @include desktop {
+            display: none;
+        }
+    }
+    &__mobile-burger-icon.hide {
+        display: none;
+    }
+    &__mobile-close-icon {
+        display: none;
+    }
+    &__mobile-close-icon.show {
+        display: block;
+        cursor: pointer;
+    }
+    &__mobile-icons-left div {
+        font-size: 30px;
+    }
+    &__logo-image {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 30px;
+        @include desktop {
+            margin-left: 0;
+        }
+    }
+    &__logo-image-h {
+        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+        height: 50px;
+        @include desktop {
+            height: 90px;
+        }
+    }
+    &__logo-image-words {
+        margin-left: 20px;
+        height: 25px;
+        @include desktop {
+            margin-left: 30px;
+            height: 45px;
+        }
+    }
+    &__mobile-icons-right {
+        width: 50%;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        font-size: 30px;
+        div {
+            font-size: 30px;
+        }
+    }
+    &__search-icon {
+        margin-left: 20px;
+        @include desktop {
+            padding: 10px;
+            border: 2px solid rgba(133, 133, 133, 0.3);
+        }
+    }
+    &__person-icon {
+        transition: 0.3s all;
+        cursor: pointer;
+        @include desktop {
+            padding: 11px;
+            border: 2px solid rgba(133, 133, 133, 0.121);
+            &:hover {
+                color: $color-white;
+                background-color: #333333ad;
+                border: 2px solid rgba(133, 133, 133, 0.3);
+                transform: scale(1.05);
+            }
+        }
+    }
+    &__desktop-burger-icon {
+        display: none;
+        @include desktop {
+            margin-left: 20px;
+            display: inline;
+            padding: 10px;
+            border: 2px solid rgba(133, 133, 133, 0.3);
+        }
+    }
+}
+.item-link-about.active {
+    border-bottom: 2px solid $color-softGreyText1;
+    color: $color-ligthGrayDisable;
+    transform: scale(1.05);
+}
+.item-link-rooms.active {
+    border-bottom: 2px solid $color-softGreyText1;
+    color: $color-ligthGrayDisable;
+    transform: scale(1.05);
+}
+.item-link-offers.active {
+    border-bottom: 2px solid $color-softGreyText1;
+    color: $color-ligthGrayDisable;
+    transform: scale(1.05);
+}
+.item-link-contact.active {
+    border-bottom: 2px solid $color-softGreyText1;
+    color: $color-ligthGrayDisable;
+    transform: scale(1.05);
+}

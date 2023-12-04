@@ -11,7 +11,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="{{ URL::asset('css/styles/style.css') }}" />
     <link rel="shortcut icon" href="../favicon.ico" type="image/ico" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
@@ -35,12 +35,12 @@
             <div class="header__logo-image">
                 <div>
                     <a href="/index.php">
-                        <img class="header__logo-image-h" src="../assets/images/miranda_h_logo.png" alt="an image of the logo" />
+                        <img class="header__logo-image-h" src="{{ URL::asset('images/assets/images/miranda_h_logo.png');}}" alt="an image of the logo" />
                     </a>
                 </div>
                 <div>
                     <a href="/index.php">
-                        <img class="header__logo-image-words" src="../assets/images/miranda_words_logo.png" alt="an image of the logo" />
+                        <img class="header__logo-image-words" src="images/assets/images/miranda_words_logo.png" alt="an image of the logo" />
                     </a>
                 </div>
             </div>
@@ -92,7 +92,7 @@
     <main class="footer">
         <div class="footer__external-container">
             <div class="footer__inner-container">
-                <img class="footer__logo" src="../assets/images/miranda_logo_golden.png" alt="a golden miranda hotel logo" />
+                <img class="footer__logo" src="images/assets/images/miranda_logo_golden.png" alt="a golden miranda hotel logo" />
                 <p class="footer__info-text">
                     Discover comfort and luxury at Miranda Hotel. Experience
                     impeccable service, stunning accommodations, and
@@ -100,11 +100,11 @@
                     now for an extraordinary experience.
                 </p>
                 <div class="footer__social-links">
-                    <a href="https://www.facebook.com/"><img id="social-fb" src="../assets/images/social_btn/fb_social_white.png" alt="" /></a>
-                    <a href="https://twitter.com/"><img id="social-tw" src="../assets/images/social_btn/tw_social_white.png" alt="" /></a>
-                    <a href="https://www.behance.net/"><img id="social-be" src="../assets/images/social_btn/be_social_white.png" alt="" /></a>
-                    <a href="https://www.linkedin.com/"><img id="social-in" src="../assets/images/social_btn/in_social_white.png" alt="" /></a>
-                    <a href="https://www.youtube.com/"><img id="social-yt" src="../assets/images/social_btn/yt_social_white.png" alt="" /></a>
+                    <a href="https://www.facebook.com/"><img id="social-fb" src="images/assets/images/social_btn/fb_social_white.png" alt="" /></a>
+                    <a href="https://twitter.com/"><img id="social-tw" src="images/assets/images/social_btn/tw_social_white.png" alt="" /></a>
+                    <a href="https://www.behance.net/"><img id="social-be" src="images/assets/images/social_btn/be_social_white.png" alt="" /></a>
+                    <a href="https://www.linkedin.com/"><img id="social-in" src="images/assets/images/social_btn/in_social_white.png" alt="" /></a>
+                    <a href="https://www.youtube.com/"><img id="social-yt" src="images/assets/images/social_btn/yt_social_white.png" alt="" /></a>
                 </div>
             </div>
             <div>
@@ -134,21 +134,21 @@
                 </h4>
                 <div class="footer__contact-us">
                     <div class="footer__contact-us-element">
-                        <img src="../assets/images/contact_icons/call_icon.png" alt="" />
+                        <img src="images/assets/images/contact_icons/call_icon.png" alt="" />
                         <div class="footer__contact-us-text-element">
                             <h4>Phone Number</h4>
                             <p>+34 934 764 263</p>
                         </div>
                     </div>
                     <div class="footer__contact-us-element">
-                        <img src="../assets/images/contact_icons/email_icon.png" alt="" />
+                        <img src="images/assets/images/contact_icons/email_icon.png" alt="" />
                         <div class="footer__contact-us-text-element">
                             <h4>Email Address</h4>
                             <p>miranda@hotels.luxury</p>
                         </div>
                     </div>
                     <div class="footer__contact-us-element">
-                        <img src="../assets/images/contact_icons/address_icon.png" alt="" />
+                        <img src="images/assets/images/contact_icons/address_icon.png" alt="" />
                         <div class="footer__contact-us-text-element">
                             <h4>Current Location</h4>
                             <p>C/ Sinfiol 146, CP: OX1-1AA</p>
@@ -166,7 +166,7 @@
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-<script type="module" src="../index.js"></script>
+<script type="module" src="{{ URL::asset('js/index.js'); }}"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
 @if (isset($confirmation) && $confirmation !== '')

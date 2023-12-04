@@ -1,0 +1,319 @@
+.home-intro {
+    position: relative;
+    margin-bottom: 60px;
+    background-color: $color-strongGreyBack;
+    z-index: 1;
+
+    &__background-landscape {
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../../images/assets/header-img/pexels-sidhaya-khanna-2445551.jpeg) no-repeat center;
+        background-size: cover;
+        opacity: 0.7;
+        @include desktop {
+            background: url(../../images/assets/header-img/Aerial-View-Water-Theme-Park.jpeg) no-repeat top;
+            background-size: cover;
+            opacity: 0.7;
+            transition: 0.3s all;
+            filter: blur(4px);
+        }
+    }
+    &__text {
+        width: 100%;
+        color: #ffffff;
+        @include md {
+            max-width: 708px;
+            margin: 0 auto;
+        }
+        @include desktop {
+            max-width: 988px;
+            margin: 0 auto;
+        }
+        @include xl {
+            max-width: 1188px;
+            margin: 0 auto;
+        }
+    }
+    &__text-section {
+        margin-left: 20px;
+        padding-top: 75px;
+        margin-bottom: 15px;
+        min-height: 310px;
+        text-align: left;
+        @include md {
+            max-width: 661px;
+            min-height: fit-content;
+            padding: 178px 0 0 0;
+            margin: 0;
+        }
+        @include desktop {
+            max-width: 661px;
+            min-height: fit-content;
+            padding: 178px 0 0 0;
+            margin: 0;
+        }
+        @include xl {
+            max-width: 661px;
+            min-height: fit-content;
+            padding: 178px 0 0 0;
+            margin: 0;
+        }
+        h5 {
+            font-weight: $soft-weight;
+            width: 240px;
+            margin-bottom: 50px;
+            @include md {
+                margin: 0;
+                min-width: 340px;
+                margin-bottom: 40px;
+                height: fit-content;
+            }
+            @include desktop {
+                margin: 0;
+                min-width: 340px;
+                margin-bottom: 40px;
+                height: fit-content;
+            }
+            @include xl {
+                margin: 0;
+                min-width: 340px;
+                margin-bottom: 40px;
+                height: fit-content;
+            }
+        }
+        h1 {
+            @include md {
+                max-height: 250px;
+                font-size: 120px;
+                line-height: 130px;
+                letter-spacing: -3.6px;
+                font-weight: 400;
+            }
+            @include desktop {
+                max-height: 250px;
+                font-size: 120px;
+                line-height: 130px;
+                letter-spacing: -3.6px;
+                font-weight: 400;
+            }
+            @include xl {
+                max-height: 250px;
+                font-size: 120px;
+                line-height: 130px;
+                letter-spacing: -3.6px;
+                font-weight: 400;
+            }
+        }
+    }
+    &__button-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-left: 20px;
+        height: 200px;
+
+        @include md {
+            max-width: 708px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            max-width: fit-content;
+            height: fit-content;
+            padding-bottom: 103px;
+            margin: 32px 0px 0px 0px;
+        }
+        @include desktop {
+            max-width: 988px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            max-width: fit-content;
+            height: fit-content;
+            padding-bottom: 103px;
+            margin: 32px 0px 0px 0px;
+        }
+        @include xl {
+            max-width: 1188px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            max-width: fit-content;
+            height: fit-content;
+            padding-bottom: 103px;
+            margin: 32px 0px 0px 0px;
+        }
+    }
+
+    &__button {
+        &:last-child {
+            border: 1px transparent solid;
+            outline: 1px solid rgba($color: #ffffff, $alpha: 0.33);
+            &:hover {
+                background-color: #bead8e4e;
+                transform: scale(1.029);
+            }
+        }
+        &:first-child {
+            border: 1px transparent solid;
+            outline: 1px solid rgba($color: #ffffff, $alpha: 0.33);
+            &:hover {
+                background-color: #bead8e4e;
+                transform: scale(1.006);
+            }
+        }
+        @include md {
+            &--left {
+                margin: 0 30px 0 0;
+            }
+        }
+        @include desktop {
+            &--left {
+                margin: 0 30px 0 0;
+            }
+        }
+        @include xl {
+            &--left {
+                margin: 0 30px 0 0;
+            }
+        }
+    }
+    &__calendar-picker {
+        min-width: 100%;
+        background-color: $color-strongerGreyBack;
+    }
+    &__calendar-picker-inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 354px;
+        padding: 20px;
+
+        @include md {
+            max-width: 708px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            max-height: 152px;
+            margin: auto;
+            padding: 0;
+        }
+        @include desktop {
+            max-width: 988px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            max-height: 152px;
+            margin: auto;
+            padding: 0;
+        }
+        @include xl {
+            max-width: 1188px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            max-height: 152px;
+            margin: auto;
+            padding: 0;
+        }
+    }
+    &__calendar-picker-inner-input {
+        label {
+            font-family: $robo-font;
+            color: $color-white;
+            font-size: $smallPlus-font;
+        }
+        input {
+            margin-top: 20px;
+        }
+
+        @include md {
+            min-width: 150px;
+            height: 75px;
+            &--right {
+                margin: 0 50px 0 30px;
+            }
+        }
+        @include desktop {
+            min-width: 230px;
+            height: 75px;
+            &--right {
+                margin: 0 130px 0 30px;
+            }
+        }
+        @include xl {
+            min-width: 330px;
+            height: 75px;
+            &--right {
+                margin: 0 230px 0 30px;
+            }
+        }
+    }
+    &__calendar-picker input[type="date"] {
+        position: relative;
+        display: block;
+        color: $color-ligthGrayDisable;
+        font-family: $robo-font;
+        font-size: $smallPlus-font;
+        font-weight: $soft-weight;
+        background-color: $color-strongerGreyBack;
+        font-size: 20px;
+        color-scheme: dark;
+        border: 0;
+        width: 100%;
+        height: 40px;
+        padding: 2px 0 15px 5px;
+        border-bottom: 3px $color-beish solid;
+        & :focus {
+            outline: none;
+            border: none;
+        }
+        @include md {
+            position: relative;
+            display: block;
+            color: $color-ligthGrayDisable;
+            font-family: $robo-font;
+            font-size: $smallPlus-font;
+            font-weight: $soft-weight;
+            background-color: $color-strongerGreyBack;
+            font-size: 20px;
+            color-scheme: dark;
+            border: 0;
+            width: 100%;
+            height: 40px;
+            padding: 2px 0 15px 25px;
+            border-bottom: 3px $color-beish solid;
+            & :focus {
+                outline: none;
+                border: none;
+            }
+        }
+    }
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        position: absolute;
+        right: 5px;
+        opacity: 1;
+        display: block;
+        background: url(../../images/assets/images/date_picker.png) no-repeat center;
+        background-size: 19px 19px;
+        background-position-x: right;
+        width: 100%;
+        height: 35px;
+        @include md {
+            position: absolute;
+            left: 0px;
+            opacity: 1;
+            display: block;
+            background: url(../../images/assets/images/date_picker.png) no-repeat center;
+            background-size: 19px 19px;
+            background-position-x: left;
+            width: 100%;
+            height: 35px;
+        }
+    }
+    &__calendar-picker-button {
+        padding: 0 25px 0 25px;
+    }
+}

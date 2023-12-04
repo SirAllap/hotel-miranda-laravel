@@ -1,0 +1,134 @@
+.subtitle-trigger {
+    color: $color-ligthGrayDisable;
+    font-family: $arch-font;
+    font-size: $small-font;
+    font-weight: $strong-weight;
+    letter-spacing: 2.8px;
+    line-height: 18px;
+}
+.big-title {
+    font-family: $old-font;
+    font-size: 56px;
+    line-height: 60px;
+    letter-spacing: -1.2px;
+    font-weight: $soft-weight;
+}
+.regular-title {
+    font-family: $old-font;
+    font-size: 36px;
+    line-height: 60px;
+    letter-spacing: -1.2px;
+    font-weight: $soft-weight;
+}
+.small-title {
+    font-family: $old-font;
+    font-size: 28px;
+    line-height: 24px;
+    letter-spacing: -1.2px;
+    font-weight: $soft-weight;
+}
+.filled-text {
+    font-family: $robo-font;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: $soft-weight;
+}
+.body-text {
+    font-family: $arch-font;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: $soft-weight;
+    color: $color-softGreyText;
+}
+.price-amount {
+    color: $color-beish;
+    font-family: $arch-font;
+    font-size: 45px;
+    line-height: 43px;
+    font-weight: $strong-weight;
+}
+.price-nigth {
+    color: $color-beish;
+    font-family: $arch-font;
+    font-size: 23px;
+    line-height: 43px;
+    font-weight: $soft-weight;
+}
+.price-amount-small {
+    color: $color-beish;
+    font-family: $arch-font;
+    font-size: 32px;
+    line-height: 43px;
+    font-weight: $strong-weight;
+}
+.discounted-price {
+    color: $color-redDiscount !important;
+    font-family: $arch-font;
+    font-size: 32px;
+    line-height: 43px;
+    font-weight: $strong-weight;
+}
+.price-nigth-small {
+    color: $color-beish;
+    font-family: $arch-font;
+    font-size: 13px;
+    line-height: 43px;
+    font-weight: $soft-weight;
+}
+//! new text
+.big-new-title {
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90px;
+    letter-spacing: -2.4px;
+}
+.regular-new-title {
+    font-family: $old-font;
+    font-family: $old-font;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+}
+.filled-new-text-clear {
+    color: #fff;
+    font-family: $robo-font;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+}
+.filled-new-text {
+    font-family: $robo-font;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+}
+.filled-arch-new-text-grey {
+    color: #777;
+    font-family: $arch-font;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+.new-subtitle-head {
+    color: $color-ligthGrayDisable;
+    font-family: $arch-font;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 2.8px;
+}
+.new-subtitle-head-gold {
+    color: #bdac8d;
+    font-family: $arch-font;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 2.8px;
+}

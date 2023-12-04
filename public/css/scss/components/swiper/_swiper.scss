@@ -1,0 +1,26 @@
+// home-rooms
+.swiper {
+    --swiper-navigation-size: 10px;
+    --swiper-pagination-color: #bead8e;
+}
+.swiper-button-next {
+    background-color: $color-beish;
+    right: 10px;
+    padding: 20px;
+    color: #fff !important;
+    fill: #fff !important;
+    stroke: #fff !important;
+    max-width: 10px;
+}
+.swiper-button-prev {
+    background-color: rgb(255, 255, 255);
+    right: 10px;
+    padding: 20px;
+    color: #000 !important;
+    fill: black !important;
+    stroke: black !important;
+}
+// home-rooms
+.swiper-pagination {
+    pointer-events: all !important;
+}

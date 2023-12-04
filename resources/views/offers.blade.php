@@ -47,37 +47,37 @@
             <div class="offers-intro__offer-card-body-services">
                 <div class="offers-intro__offer-card-body-services-left">
                     <div>
-                        <img src="../assets/images/offers_services/air_conditioner.png" alt="" /><span>Air Conditioner</span>
+                        <img src="images/assets/images/offers_services/air_conditioner.png" alt="" /><span>Air Conditioner</span>
                     </div>
                     <div>
-                        <img src="../assets/images/offers_services/breakfast.png" alt="" /><span>Breakfast</span>
+                        <img src="images/assets/images/offers_services/breakfast.png" alt="" /><span>Breakfast</span>
                     </div>
                     <div>
-                        <img src="../assets/images/offers_services/cleaning.png" alt="" /><span>Cleaning</span>
+                        <img src="images/assets/images/offers_services/cleaning.png" alt="" /><span>Cleaning</span>
                     </div>
                     <div>
-                        <img src="../assets/images/offers_services/grocery.png" alt="" /><span>Grocery</span>
+                        <img src="images/assets/images/offers_services/grocery.png" alt="" /><span>Grocery</span>
                     </div>
                     <div>
-                        <img src="../assets/images/offers_services/shop_near.png" alt="" /><span>Shop Near</span>
+                        <img src="images/assets/images/offers_services/shop_near.png" alt="" /><span>Shop Near</span>
                     </div>
                 </div>
 
                 <div class="offers-intro__offer-card-body-services-right">
                     <div>
-                        <img src="../assets/images/offers_services/Vector.png" alt="" /><span>High Speed Wifi</span>
+                        <img src="images/assets/images/offers_services/Vector.png" alt="" /><span>High Speed Wifi</span>
                     </div>
                     <div>
-                        <img src="../assets/images/offers_services/kitchen.png" alt="" /><span>Kitchen</span>
+                        <img src="images/assets/images/offers_services/kitchen.png" alt="" /><span>Kitchen</span>
                     </div>
                     <div>
-                        <img src="../assets/images/offers_services/shower.png" alt="" /><span>Shower</span>
+                        <img src="images/assets/images/offers_services/shower.png" alt="" /><span>Shower</span>
                     </div>
                     <div>
-                        <img src="../assets/images/offers_services/single_bed.png" alt="" /><span>Single Bed</span>
+                        <img src="images/assets/images/offers_services/single_bed.png" alt="" /><span>Single Bed</span>
                     </div>
                     <div>
-                        <img src="../assets/images/offers_services/towels.png" alt="" /><span>Towels</span>
+                        <img src="images/assets/images/offers_services/towels.png" alt="" /><span>Towels</span>
                     </div>
                 </div>
             </div>
@@ -101,7 +101,7 @@
             <div class="offers-popular__card swiper-slide">
                 <img src="{{$room['URL']}}" alt="a picture of a hotel room" />
                 <div class="offers-popular__card-service-info">
-                    <img src="../assets/images/miranda_services_info.png" alt="an illustration of the room services" />
+                    <img src="images/assets/images/miranda_services_info.png" alt="an illustration of the room services" />
                 </div>
                 <div class="offers-popular__text-container">
                     <h4 class="small-title">Minimal {{$room['room_type']}}</h4>

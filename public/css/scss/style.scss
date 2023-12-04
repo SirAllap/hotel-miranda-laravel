@@ -1,0 +1,39 @@
+//  Utils
+@import "./utils/base";
+@import "./utils/variables";
+@import "./utils/mixins";
+
+// Base & Layout
+@import "./layout/header/header";
+@import "./layout/header/dropDownMobile";
+@import "./layout/footer/footer";
+
+// Components
+@import "./components/buttons/buttons";
+@import "./components/text/text";
+@import "./components/swiper/swiper";
+@import "./components/featureCard/featureCard";
+@import "./components/foodMenu/foodMenu";
+
+// Pages
+// home
+@import "./pages/home/home-intro";
+@import "./pages/home/home-about";
+@import "./pages/home/home-rooms";
+@import "./pages/home/home-facilities";
+@import "./pages/home/home-menu";
+// aboutus
+@import "./pages/aboutUs/aboutus-intro";
+@import "./pages/aboutUs/aboutus-facilities";
+@import "./pages/aboutUs/aboutus-counter";
+// rooms
+@import "./pages/rooms/rooms-intro";
+@import "./pages/rooms/rooms-cards";
+// offers
+@import "./pages/offers/offers-intro";
+@import "./pages/offers/offers-popular";
+// contact
+@import "./pages/contact/contact-intro";
+// room details
+@import "./pages/roomDetails/roomDetails-intro";
+@import "./pages/roomDetails/roomDetails-cards";

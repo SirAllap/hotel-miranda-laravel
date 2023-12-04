@@ -98,48 +98,48 @@
 		<div class="room-details-intro__amenities-services-left">
 			<div>
 				@if (strpos($room['all_amenities'], 'Free Wifi') !== false)
-				<img src="../assets/images/offers_services/Vector.png" alt="" />
+				<img src="images/assets/images/offers_services/Vector.png" alt="" />
 				<span>High Speed Wifi</span>
 				@endif
 			</div>
 			<div>
 				@if (strpos($room['all_amenities'], 'Kitchen') !== false)
-				<img src="../assets/images/offers_services/kitchen.png" alt="" />
+				<img src="images/assets/images/offers_services/kitchen.png" alt="" />
 				<span>Kitchen</span>
 				@endif
 			</div>
 
 			<div>
 				@if (strpos($room['all_amenities'], 'Shower') !== false)
-				<img src="../assets/images/offers_services/shower.png" alt="" />
+				<img src="images/assets/images/offers_services/shower.png" alt="" />
 				<span>Shower</span>
 				@endif
 			</div>
 
 			<div>
 				@if (strpos($room['all_amenities'], 'Single Bed') !== false)
-				<img src="../assets/images/offers_services/single_bed.png" alt="" />
+				<img src="images/assets/images/offers_services/single_bed.png" alt="" />
 				<span>Single Bed</span>
 				@endif
 			</div>
 
 			<div>
 				@if (strpos($room['all_amenities'], 'Towels') !== false)
-				<img src="../assets/images/offers_services/towels.png" alt="" />
+				<img src="images/assets/images/offers_services/towels.png" alt="" />
 				<span>Towels</span>
 				@endif
 			</div>
 
 			<div>
 				@if (strpos($room['all_amenities'], 'Strong Locker') !== false)
-				<img src="../assets/images/offers_services/locker.png" alt="" />
+				<img src="images/assets/images/offers_services/locker.png" alt="" />
 				<span>Strong Locker</span>
 				@endif
 			</div>
 
 			<div>
 				@if (strpos($room['all_amenities'], 'Expert Team') !== false)
-				<img src="../assets/images/offers_services/team.png" alt="" />
+				<img src="images/assets/images/offers_services/team.png" alt="" />
 				<span>Expert Team</span>
 				@endif
 			</div>
@@ -148,49 +148,49 @@
 		<div class="room-details-intro__amenities-services-right">
 			<div>
 				@if (strpos($room['all_amenities'], 'Air Conditioner') !== false)
-				<img src="../assets/images/offers_services/air_conditioner.png" alt="" />
+				<img src="images/assets/images/offers_services/air_conditioner.png" alt="" />
 				<span>Air Conditioner</span>
 				@endif
 			</div>
 
 			<div>
 				@if (strpos($room['all_amenities'], 'Breakfast') !== false)
-				<img src="../assets/images/offers_services/breakfast.png" alt="" />
+				<img src="images/assets/images/offers_services/breakfast.png" alt="" />
 				<span>Breakfast</span>
 				@endif
 			</div>
 
 			<div>
 				@if (strpos($room['all_amenities'], 'Cleaning') !== false)
-				<img src="../assets/images/offers_services/cleaning.png" alt="" />
+				<img src="images/assets/images/offers_services/cleaning.png" alt="" />
 				<span>Cleaning</span>
 				@endif
 			</div>
 
 			<div>
 				@if (strpos($room['all_amenities'], 'Grocery') !== false)
-				<img src="../assets/images/offers_services/grocery.png" alt="" />
+				<img src="images/assets/images/offers_services/grocery.png" alt="" />
 				<span>Grocery</span>
 				@endif
 			</div>
 
 			<div>
 				@if (strpos($room['all_amenities'], 'Shop Near') !== false)
-				<img src="../assets/images/offers_services/shop_near.png" alt="" />
+				<img src="images/assets/images/offers_services/shop_near.png" alt="" />
 				<span>Shop Near</span>
 				@endif
 			</div>
 
 			<div>
 				@if (strpos($room['all_amenities'], '24/7 Online Support') !== false)
-				<img src="../assets/images/offers_services/support.png" alt="" />
+				<img src="images/assets/images/offers_services/support.png" alt="" />
 				<span>24/7 Online Support</span>
 				@endif
 			</div>
 
 			<div>
 				@if (strpos($room['all_amenities'], 'Smart Security') !== false)
-				<img src="../assets/images/offers_services/security.png" alt="" />
+				<img src="images/assets/images/offers_services/security.png" alt="" />
 				<span>Smart Security</span>
 				@endif
 			</div>
@@ -212,8 +212,8 @@
 <main class="room-details-intro__founder-container">
 	<div class="room-details-intro__founder">
 		<div>
-			<img src="../assets/images/elipse-banner.png" alt="a banner on the top right of the main photo" />
-			<img src="../assets/images/founder_photo.png" alt="a photo of the founder" />
+			<img src="images/assets/images/elipse-banner.png" alt="a banner on the top right of the main photo" />
+			<img src="images/assets/images/founder_photo.png" alt="a photo of the founder" />
 		</div>
 		<h4 class="small-title">David P. Robaina</h4>
 		<h5 class="subtitle-trigger">FOUNDER, QUX CO.</h5>
@@ -263,7 +263,7 @@
 				<div class="offers-popular__card swiper-slide">
 					<img src="{{$room['URL']}}" alt="a picture of a hotel room" />
 					<div class="offers-popular__card-service-info">
-						<img src="../assets/images/miranda_services_info.png" alt="an illustration of the room services" />
+						<img src="images/assets/images/miranda_services_info.png" alt="an illustration of the room services" />
 					</div>
 					<div class="offers-popular__text-container">
 						<h4 class="small-title">{{$room['room_type']}}</h4>

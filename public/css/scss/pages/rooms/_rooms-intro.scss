@@ -1,0 +1,65 @@
+.rooms-intro {
+    margin-bottom: 60px;
+    &__head-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: $color-midStrongGreyBack;
+        height: 300px;
+        padding: 20px;
+        color: $color-white;
+        h1 {
+            margin-top: 20px;
+            @include desktop {
+                margin: 0 auto 0 auto;
+                width: 1170px;
+            }
+        }
+        h5 {
+            color: $color-white;
+            font-weight: 300;
+            @include desktop {
+                margin: 0 auto 20px auto;
+                width: 1170px;
+            }
+        }
+    }
+    &__breadcrumbs-container {
+        position: relative;
+        width: 100%;
+        @include desktop {
+            margin: 0 auto 20px auto;
+            max-width: 1420px;
+        }
+    }
+    &__breadcrumbs {
+        position: absolute;
+        right: 0px;
+        top: 50px;
+        text-align: center;
+        background-color: $color-white;
+        padding: 15px 25px;
+        height: auto;
+        color: black;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 18px;
+        letter-spacing: -0.5px;
+        :first-child {
+            font-family: $arch-font;
+            color: black !important;
+        }
+        :last-child {
+            color: $color-beish;
+        }
+        a {
+            text-decoration: none;
+            line-height: 2.5;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+}

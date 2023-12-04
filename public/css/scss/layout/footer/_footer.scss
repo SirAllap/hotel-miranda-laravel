@@ -1,0 +1,191 @@
+.footer {
+    padding: 20px;
+    color: $color-softGreyText;
+    background: url("../../images/assets/images/footer_back2.png"), $color-white;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0;
+        background-repeat: repeat;
+    }
+    @include xl {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    &__external-container {
+        @include desktop {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 20px;
+            min-width: 1000px;
+            margin: 0 auto;
+        }
+        @include xl {
+            min-width: 1188px;
+        }
+    }
+    &__logo {
+        max-width: 245px;
+    }
+    &__info-text {
+        width: 270px;
+        padding: 30px 0 0 0;
+        font-family: $arch-font;
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 300;
+    }
+    &__social-links {
+        width: 270px;
+        padding: 30px 0 30px 0;
+    }
+    &__social-links img {
+        &:hover {
+            scale: 1.05;
+        }
+        width: 40px;
+        height: 40px;
+    }
+    &__services-title {
+        width: 360px;
+        font-family: $old-font;
+        font-size: 28px;
+        font-weight: $soft-weight;
+        line-height: 24px;
+        color: $color-strongerGreyBack;
+        margin: 20px 0 30px 0;
+    }
+    &__services {
+        width: 360px;
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+    &__services-element {
+        display: block;
+        font-family: $robo-font;
+        font-size: 16px;
+        line-height: 48px;
+    }
+    &__services-colum-left {
+        width: 49vw;
+    }
+    &__services-colum-right {
+        width: 49vw;
+    }
+    &__contact-us-title {
+        width: 200px;
+        font-family: $old-font;
+        font-size: 28px;
+        font-weight: $soft-weight;
+        line-height: 24px;
+        color: $color-strongerGreyBack;
+        margin: 20px 0 40px 0;
+        @include desktop {
+            width: 250px;
+        }
+    }
+    &__contact-us-element {
+        width: 200px;
+        display: flex;
+        flex-direction: row;
+        margin-top: 40px;
+        img {
+            width: 50px;
+            height: fit-content;
+        }
+    }
+    &__contact-us-text-element {
+        padding: 10px 0 10px 20px;
+        h4 {
+            font-family: $old-font;
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 500;
+        }
+        p {
+            font-family: $robo-font;
+            font-size: 14px;
+            line-height: 17px;
+            font-weight: 300;
+        }
+    }
+}
+.copyright {
+    margin: auto;
+    padding: 15px 0 15px 20px;
+    color: #222222;
+    font-family: $robo-font;
+    font-weight: $strong-weight;
+    font-size: 16px;
+    height: 93px;
+    background-color: #f8f8f8;
+    @include desktop {
+        flex-wrap: wrap !important;
+        min-width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    @include xl {
+        flex-wrap: wrap !important;
+        min-width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    &__inner-content {
+        @include desktop {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+            max-width: 1188px;
+            height: 100%;
+        }
+    }
+    p {
+        margin-bottom: 20px;
+        @include desktop {
+            margin-bottom: 0px;
+        }
+    }
+}
+
+#social-fb {
+    transition: all 0.3s;
+    &:hover {
+        content: url("../../images/assets/images/social_btn/fb_social_gold.png");
+    }
+}
+#social-tw {
+    transition: all 0.3s;
+    &:hover {
+        content: url("../../images/assets/images/social_btn/tw_social_gold.png");
+    }
+}
+#social-be {
+    transition: all 0.3s;
+    &:hover {
+        content: url("../../images/assets/images/social_btn/be_social_gold.png");
+    }
+}
+#social-in {
+    transition: all 0.3s;
+    &:hover {
+        content: url("../../images/assets/images/social_btn/in_social_gold.png");
+    }
+}
+#social-yt {
+    transition: all 0.3s;
+    &:hover {
+        content: url("../../images/assets/images/social_btn/yt_social_gold.png");
+    }
+}

@@ -1,0 +1,94 @@
+.rooms-cards {
+    @include desktop {
+        margin: 0 auto;
+    }
+    margin-bottom: 40px;
+    text-align: center;
+    padding: 20px;
+    &__wrapper {
+        @include desktop {
+            max-width: 1170px;
+        }
+    }
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+    &__card-service-info img {
+        z-index: 5;
+        position: relative;
+        bottom: 26px;
+        width: 70%;
+        box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    }
+    &__text-container {
+        margin: 0px 20px 20px 20px;
+        height: 150px;
+    }
+    p {
+        color: $color-softGreyText;
+        margin-top: 10px;
+        height: 60px;
+    }
+    &__text-frist-span {
+        font-size: 16px;
+    }
+    form {
+        display: inline;
+    }
+    &__text-second-span {
+        :hover {
+            background-color: $color-softGreyText;
+            color: white;
+            border: 2px solid $color-softGreyText;
+        }
+        button {
+            border: 2px solid $color-verySoftGrey;
+            transition: 0.3s all;
+            text-decoration: none;
+            color: inherit;
+            padding: 8px 12px;
+            font-size: 16px;
+            font-family: $arch-font;
+            font-weight: 700;
+            color: $color-grey-transparent;
+            background-color: transparent;
+        }
+    }
+}
+.room-image {
+    height: 400px;
+    @include desktop {
+        height: 350px;
+    }
+}
+.swiper-rooms-cards {
+    @include desktop {
+        max-width: 1170px;
+    }
+}
+#pagination-rooms-cards {
+    --swiper-pagination-bullet-border-radius: 0px;
+    --swiper-pagination-bullet-size: 20px;
+    --swiper-pagination-color: #bead8e;
+    --swiper-pagination-bullet-inactive-color: transparent;
+    --swiper-pagination-bullet-horizontal-gap: 5px;
+}
+.swiper-pagination-bullet-active {
+    color: white;
+}
+.rooms-cards__wrapper {
+    width: fit-content !important;
+    @include desktop {
+        display: grid !important;
+        grid-template-rows: auto auto auto;
+        grid-auto-flow: column !important;
+
+        > .swiper-slide {
+            height: fit-content !important;
+        }
+    }
+}
+.swiper-slide-rooms-cards {
+    margin-top: 0 !important;
+}

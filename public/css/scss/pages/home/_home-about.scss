@@ -1,0 +1,270 @@
+.home-about {
+    position: relative;
+    overflow-x: clip;
+    @include md {
+        max-width: 708px;
+        margin: 0 auto;
+    }
+    @include desktop {
+        position: relative;
+        max-width: 988px;
+        margin: 0 auto;
+        padding: 0;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+    @include xl {
+        max-width: 1188px;
+        margin: 0 auto;
+    }
+    &__text {
+        &--title {
+            font-size: 56px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 60px;
+            letter-spacing: -1.2px;
+        }
+        &--body {
+            max-width: 397px;
+        }
+        @include md {
+        }
+        @include desktop {
+        }
+        @include xl {
+        }
+    }
+    &__text-button {
+        background-color: $color-softGrayBackground;
+        height: 650px;
+        width: 100%;
+        display: block;
+        padding: 20px;
+        h4 {
+            margin: 20px 0 20px 0;
+        }
+        h1 {
+            margin: 20px 0 0 0;
+        }
+        p {
+            color: $color-ligthGrayDisable;
+            font-family: $arch-font;
+            font-size: $small-font;
+            line-height: 24px;
+            margin: 20px 0 30px 0;
+        }
+        @include md {
+            h1 {
+                margin: 0;
+                font-size: 59px;
+                font-weight: 400;
+                line-height: 90px;
+                letter-spacing: -2.3px;
+            }
+        }
+        @include desktop {
+            background-color: transparent;
+            height: 610px;
+            padding: 0;
+            margin: 0;
+            h4 {
+                margin: 0;
+            }
+            h1 {
+                margin: 0;
+                font-size: 63px;
+                font-weight: 400;
+                line-height: 90px;
+                letter-spacing: -2.4px;
+            }
+            p {
+                color: $color-ligthGrayDisable;
+                font-family: $arch-font;
+                font-size: $small-font;
+                line-height: 24px;
+                margin: 0;
+                text-align: justify;
+            }
+        }
+        @include xl {
+            background-color: transparent;
+            h1 {
+                margin: 0;
+                font-size: 88px;
+                font-weight: 400;
+                line-height: 90px;
+                letter-spacing: -2.4px;
+            }
+        }
+    }
+    &__background {
+        @include md {
+        }
+        @include desktop {
+            position: absolute;
+            width: 748px;
+            height: 610px;
+            z-index: -1;
+            background: url("../../images/assets/images/background.png");
+            background-repeat: no-repeat;
+            right: 30%;
+            bottom: 36%;
+            transform: translate(50%, 50%);
+        }
+        @include xl {
+            width: 1084px;
+            height: 610px;
+            z-index: -1;
+            background: url("../../images/assets/images/background.png");
+            background-repeat: no-repeat;
+            position: absolute;
+            right: 30%;
+            bottom: 37%;
+            transform: translate(50%, 50%);
+        }
+    }
+    &__text-button-content {
+        @include md {
+        }
+        @include desktop {
+            width: 457px;
+            margin-left: 10px;
+            h4 {
+                padding: 110px 0 36px 0;
+            }
+            p {
+                margin: 19px 0 23.51px 0;
+            }
+        }
+        @include xl {
+            width: 457px;
+            margin-left: 76px;
+            h4 {
+                padding: 110px 0 36px 0;
+            }
+            p {
+                margin: 19px 0 23.51px 0;
+            }
+        }
+    }
+    &__cards {
+        @include desktop {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+    &__card {
+        margin-top: 40px;
+        min-height: 500px;
+        box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+        max-width: 270px;
+        margin: 0 auto;
+        @include md {
+            max-width: 270px;
+            margin: 0 auto;
+            padding: 0;
+        }
+        @include desktop {
+            max-width: 270px;
+            margin: 0 auto;
+            padding: 0;
+            box-shadow: none;
+        }
+        @include xl {
+        }
+        &--topcard {
+            position: relative;
+            bottom: 120px;
+            @include desktop {
+                display: flex;
+                flex-direction: column-reverse;
+                bottom: 0px;
+                margin-right: 30px;
+                margin-left: 20px;
+            }
+        }
+        &--bottomcard {
+            margin-top: -50px;
+            @include desktop {
+                margin-top: 0px;
+            }
+        }
+    }
+    &__card-img {
+        height: 50%;
+        min-width: 250px;
+        background-color: $color-ligthGrayDisable;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            @include desktop {
+                min-height: 300px;
+                min-width: 250px;
+            }
+        }
+        &--crew {
+            @include desktop {
+                margin-top: 30px;
+            }
+        }
+        &--luxury {
+            @include desktop {
+                margin-bottom: 30px;
+            }
+        }
+    }
+    &__card-info {
+        min-height: 300px;
+        min-width: 250px;
+        display: block;
+        text-align: center;
+        img {
+            height: 50px;
+            margin-top: 54px;
+        }
+        h1 {
+            margin-top: 29.5px;
+        }
+        p {
+            margin-top: 21px;
+            line-height: 24px;
+            padding: 0 35px 0 35px;
+        }
+        &--topcard {
+            background: url("../../images/assets/images/strong_team_background.png"), #fff;
+            background-repeat: no-repeat;
+            background-position: right;
+            background-position-y: 50px;
+            background-size: 144px;
+        }
+        &--variation {
+            background-color: $color-strongGreyBack;
+            img {
+                height: 50px;
+                position: initial;
+            }
+            h1 {
+                color: $color-white;
+                position: initial;
+            }
+            h4 {
+                color: $color-white;
+                position: initial;
+            }
+        }
+        @include desktop {
+            h1 {
+                font-size: 30px;
+                line-height: 30px;
+                letter-spacing: -0.9px;
+            }
+            h4 {
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.menu-item {
+    display: flex;
+    flex-direction: row;
+}
+.menu-item-text {
+    padding: 10px 20px 10px 20px;
+    margin: auto;
+    h4 {
+        margin: 0 0 10px 0;
+        font-family: $old-font;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: -0.72px;
+        font-weight: $soft-weight;
+    }
+    p {
+        font-family: $robo-font;
+        font-size: 12px;
+        line-height: 24px;
+        text-align: justify;
+    }
+}

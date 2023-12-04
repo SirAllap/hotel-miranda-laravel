@@ -31,7 +31,7 @@
 				<div class="rooms-cards__card">
 					<img class="room-image" src="{{$room['URL']}}" alt="a picture of a hotel room" />
 					<div class="rooms-cards__card-service-info">
-						<img src="../assets/images/miranda_services_info.png" alt="an illustration of the room services" />
+						<img src="images/assets/images/miranda_services_info.png" alt="an illustration of the room services" />
 					</div>
 					<div class="rooms-cards__text-container">
 						<h4 class="small-title">{{$room['room_type']}}</h4>

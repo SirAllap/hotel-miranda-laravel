@@ -1,0 +1,47 @@
+.room-details-cards {
+    @include xl {
+        width: 1170px;
+        margin: 0 auto;
+    }
+    margin-bottom: 40px;
+    text-align: center;
+    padding: 20px;
+    img {
+        width: 100%;
+    }
+    &__card {
+        margin-top: 32px;
+    }
+    &__card-service-info img {
+        z-index: 5;
+        position: relative;
+        bottom: 26px;
+        width: 70%;
+        box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    }
+    &__text-container {
+        margin: 0px 20px 40px 20px;
+    }
+    p {
+        color: $color-softGreyText;
+        margin-top: 20px;
+    }
+    &__text-frist-span {
+        font-size: 16px;
+    }
+    &__text-second-span {
+        font-size: 16px;
+        font-family: $arch-font;
+        font-weight: 700;
+        color: $color-verySoftGrey;
+    }
+    h4 {
+        text-align: center;
+    }
+}
+.swiper-related-rooms-button-next {
+    top: 25% !important;
+}
+.swiper-related-rooms-button-prev {
+    top: 25% !important;
+}

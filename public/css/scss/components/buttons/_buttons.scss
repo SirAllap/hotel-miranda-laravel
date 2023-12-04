@@ -1,0 +1,46 @@
+.button {
+    font-family: $arch-font;
+    color: $color-white;
+    font-weight: $strong-weight;
+    letter-spacing: 2.8px;
+    line-height: 15.23px;
+    font-size: $small-font;
+    display: block;
+    width: 216px;
+    height: 60px;
+    transition: 0.3s all;
+    border: 2px transparent solid;
+    cursor: pointer;
+    &--beige {
+        background-color: $color-beish;
+        &:hover {
+            background-color: $color-midStrongGreyBack;
+            border: 1px transparent solid;
+            outline: 1px solid rgba($color: #ffffff, $alpha: 0.33);
+        }
+    }
+    &--beige-no-animation {
+        background-color: $color-beish;
+        &:hover {
+            background-color: $color-midStrongGreyBack;
+            border: 1px transparent solid;
+            outline: 1px solid rgba($color: #ffffff, $alpha: 0.33);
+        }
+    }
+    &--auto {
+        width: fit-content;
+        &:hover {
+            background-color: $color-midStrongGreyBack;
+            border: 1px transparent solid;
+            outline: 1px solid rgba($color: #ffffff, $alpha: 0.33);
+        }
+    }
+    &--grey {
+        background-color: $color-midStrongGreyBack;
+        border: 2px rgba($color: #ffffff, $alpha: 0.33) solid;
+        &:hover {
+            background-color: $color-beish;
+            border: 1px transparent solid;
+        }
+    }
+}

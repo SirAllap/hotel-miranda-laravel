@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\IndexController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RoomController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,4 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [IndexController::class, 'index'])->name('index');
+Route::get('/', [RoomController::class, 'index'])->name('index');
+Route::get('/about-us', function () {
+    return view('about-us');
+})->name('about-us');
+Route::get('/rooms', [RoomController::class, 'rooms'])->name('index');
+// Route::get('/offers', [RoomController::class, 'index'])->name('index');
+// Route::get('/contact', [RoomController::class, 'index'])->name('index');
