@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\OfferController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoomController;
@@ -24,4 +25,5 @@ Route::get('/about-us', function () {
 Route::get('/rooms', [RoomController::class, 'rooms'])->name('rooms');
 
 Route::get('/offers', [OfferController::class, 'offers'])->name('offers');
-// Route::get('/contact', [RoomController::class, 'index'])->name('index');
+
+Route::match(['get', 'post'], '/contact', [ContactController::class, 'contact'])->name('contact');
