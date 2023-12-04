@@ -19,7 +19,7 @@
 					TAKE A TOUR
 				</button>
 			</a>
-			<a href="../about-us.php" style="text-decoration: none;">
+			<a href="../about-us" style="text-decoration: none;">
 				<button class="home-intro__button button button--grey">
 					LEARN MORE
 				</button>
@@ -28,7 +28,7 @@
 	</div>
 
 	<div class="home-intro__calendar-picker">
-		<form action="../rooms.php" method="get">
+		<form action="../rooms" method="get">
 			<section class="home-intro__calendar-picker-inner">
 				<div class="home-intro__calendar-picker-inner-input home-intro__calendar-picker-inner-input--left">
 					<label for="arrival">Arrival date:</label>
@@ -63,7 +63,7 @@
 				each moment truly exceptional. Welcome to a genuine
 				urban escape.
 			</p>
-			<a href="../offers.php" style="text-decoration: none;">
+			<a href="../offers" style="text-decoration: none;">
 				<button class="home-about__button button button--beige">
 					BOOK NOW
 				</button>
@@ -156,7 +156,7 @@
 				<iframe src="https://www.youtube-nocookie.com/embed/Bu3Doe45lcU?si=1rHPncx6fmoXVYtz&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 			</div>
 		</section>
-		<a href="../offers.php" style="text-decoration: none;">
+		<a href="../offers" style="text-decoration: none;">
 			<button class="home-rooms__intro-video-button button button--beige-no-animation">
 				BOOK NOW
 			</button>

@@ -14,7 +14,7 @@
 			</h1>
 			<div class="room-details-intro__breadcrumbs-container">
 				<div class="room-details-intro__breadcrumbs">
-					<a href="/index.php"><span class="room-details-intro__breadcrumbs-home">Home</span></a>
+					<a href="/"><span class="room-details-intro__breadcrumbs-home">Home</span></a>
 					<span class="room-details-intro__breadcrumbs-separator">&nbsp|&nbsp</span>
 					<span class="room-details-intro__breadcrumbs-about">Room Details</span>
 					@if(isset($room))
@@ -64,7 +64,7 @@
 			</button>
 		</form>
 		@else
-		<form action="/create-booking.php" method="post">
+		<form action="/create-booking" method="post">
 			<p>Check Availability</p>
 			<label for="">Check In</label>
 			<input name="trip-start" class=" room-details-intro__calendar-picker" type="date" value="{{$start}}" required />
@@ -201,7 +201,7 @@
 @else
 <div class="unavailable-booking">
 	<h1 class="big-title">Unfortunately, the room you desire is not available for the selected dates!</h1>
-	<a href="/rooms.php" style="text-decoration: none;">
+	<a href="/rooms" style="text-decoration: none;">
 		<button class="button button--beige button--auto">
 			Go back to Rooms
 		</button>
@@ -271,7 +271,7 @@
 							{{$room['quick_description']}}
 						</p>
 						<span class="offers-popular__text-frist-span price-amount">${{$room['price']}}/Night</span>&nbsp&nbsp&nbsp&nbsp
-						<form action="../room-details.php" method="get"><span class="rooms-cards__text-second-span">
+						<form action="../room-details" method="get"><span class="rooms-cards__text-second-span">
 								<input type="hidden" name="room_id" value="{{$room['id']}}" />
 								<button type="submit">Booking Now</button>
 							</span>

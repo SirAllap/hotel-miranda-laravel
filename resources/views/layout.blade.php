@@ -34,12 +34,12 @@
             </div>
             <div class="header__logo-image">
                 <div>
-                    <a href="/index.php">
+                    <a href="/">
                         <img class="header__logo-image-h" src="{{ URL::asset('images/assets/images/miranda_h_logo.png');}}" alt="an image of the logo" />
                     </a>
                 </div>
                 <div>
-                    <a href="/index.php">
+                    <a href="/">
                         <img class="header__logo-image-words" src="images/assets/images/miranda_words_logo.png" alt="an image of the logo" />
                     </a>
                 </div>
@@ -48,16 +48,16 @@
         <div class="header__desktop-menu">
             <ul class="header__desktop-menu-list">
                 <li class="header__desktop-menu-list-item">
-                    <a class="item-link-about" href="/about-us.php">About Us</a>
+                    <a class="item-link-about" href="/about-us">About Us</a>
                 </li>
                 <li class="header__desktop-menu-list-item">
-                    <a class="item-link-rooms" href="/rooms.php">Rooms</a>
+                    <a class="item-link-rooms" href="/rooms">Rooms</a>
                 </li>
                 <li class="header__desktop-menu-list-item">
-                    <a class="item-link-offers" href="/offers.php">Offers</a>
+                    <a class="item-link-offers" href="/offers">Offers</a>
                 </li>
                 <li class="header__desktop-menu-list-item">
-                    <a class="item-link-contact" href="/contact.php">Contact</a>
+                    <a class="item-link-contact" href="/contact">Contact</a>
                 </li>
             </ul>
         </div>
@@ -70,16 +70,16 @@
     <section id="dropDown" class="mobile__drop-down-menu">
         <ul class="mobile__menu-list">
             <li class="mobile__menu-list-item">
-                <a href="/about-us.php">About Us</a>
+                <a href="/about-us">About Us</a>
             </li>
             <li class="mobile__menu-list-item">
-                <a href="/rooms.php">Rooms</a>
+                <a href="/rooms">Rooms</a>
             </li>
             <li class="mobile__menu-list-item">
-                <a href="/offers.php">Offers</a>
+                <a href="/offers">Offers</a>
             </li>
             <li class="mobile__menu-list-item">
-                <a href="/contact.php">Contact</a>
+                <a href="/contact">Contact</a>
             </li>
         </ul>
     </section>

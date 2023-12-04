@@ -14,7 +14,7 @@
             </h1>
             <div class="offers-intro__breadcrumbs-container">
                 <div class="offers-intro__breadcrumbs">
-                    <a href="/index.php"><span class="offers-intro__breadcrumbs-home">Home</span></a>
+                    <a href="/"><span class="offers-intro__breadcrumbs-home">Home</span></a>
                     <span class="offers-intro__breadcrumbs-separator">&nbsp|&nbsp</span>
                     <span class="offers-intro__breadcrumbs-about">Offers</span>
                 </div>
@@ -81,7 +81,7 @@
                     </div>
                 </div>
             </div>
-            <form action="../room-details.php" method="get">
+            <form action="../room-details" method="get">
                 <input type="hidden" name="room_id" value="{{$room['id']}}" />
                 <button type="submit" class="offers-intro__button button button--beige">
                     BOOK NOW
@@ -108,7 +108,7 @@
                     <p class="filled-text">
                         {{$room['quick_description']}}
                     </p>
-                    <span class="offers-popular__text-frist-span price-amount">${{$room['price']}}/Night</span>&nbsp&nbsp&nbsp&nbsp<span class="offers-popular__text-second-span"><a href="../rooms.php">Check Availablity</a></span>
+                    <span class="offers-popular__text-frist-span price-amount">${{$room['price']}}/Night</span>&nbsp&nbsp&nbsp&nbsp<span class="offers-popular__text-second-span"><a href="../rooms">Check Availablity</a></span>
                 </div>
             </div>
             @endforeach

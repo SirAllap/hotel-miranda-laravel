@@ -14,7 +14,7 @@
 			</h1>
 			<div class="rooms-intro__breadcrumbs-container">
 				<div class="rooms-intro__breadcrumbs">
-					<a href="/index.php"><span class="rooms-intro__breadcrumbs-home">Home</span></a>
+					<a href="/"><span class="rooms-intro__breadcrumbs-home">Home</span></a>
 					<span class="rooms-intro__breadcrumbs-separator">&nbsp|&nbsp</span>
 					<span class="rooms-intro__breadcrumbs-about">Rooms</span>
 				</div>
@@ -39,7 +39,7 @@
 							{{$room['quick_description']}}
 						</p>
 						<span class="rooms-cards__text-frist-span price-amount">${{$room['price']}}/Night</span>&nbsp&nbsp&nbsp&nbsp
-						<form action="../room-details.php" method="get">
+						<form action="../room-details" method="get">
 							<span class="rooms-cards__text-second-span">
 								<input type="hidden" name="room_id" value="{{$room['id']}}" />
 								<button type="submit">Booking Now</button>
