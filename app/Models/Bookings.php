@@ -10,5 +10,5 @@ class Bookings extends Model
     use HasFactory;
     public $timestamps = false;
     protected $table = 'booking';
-    protected $fillable = ['guest', 'phone_number', 'email', 'check_in', 'check_out', 'special_request'];
+    protected $fillable = ['guest', 'phone_number', 'email', 'check_in', 'check_out', 'special_request', 'room_id'];
 }
