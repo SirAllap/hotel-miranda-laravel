@@ -51,7 +51,7 @@
 				unrivaled flavors and impeccable service, embracing the
 				epitome of opulence.
 			</p>
-			<a href="../index.php#video" style="text-decoration: none;">
+			<a href="../#video" style="text-decoration: none;">
 				<button class="aboutus-intro__restaurant-button button button--beige">
 					TAKE A TOUR
 				</button>
@@ -72,7 +72,7 @@
 	<div class="aboutus-facilities__swiper swiper swiper-features">
 		<div class="aboutus-facilities__swiper-wrapper swiper-wrapper">
 			<div class="general-features-card rating-black swiper-slide swiper-slide-card">
-				<img class="general-features-card__features-left-img" src="/assets/images/features/rating.png" alt="icon" />
+				<img class="general-features-card__features-left-img" src="/images/assets/images/features/rating.png" alt="icon" />
 				<div class="general-features-card__features-card-text">
 					<h4 class="home-facilities__features-title regular-title">
 						Have High Rating
@@ -85,7 +85,7 @@
 				</div>
 			</div>
 			<div class="general-features-card clock-black swiper-slide swiper-slide-card">
-				<img class="general-features-card__features-left-img" src="/assets/images/features/clock.png" alt="icon" />
+				<img class="general-features-card__features-left-img" src="/images/assets/images/features/clock.png" alt="icon" />
 				<div class="general-features-card__features-card-text">
 					<h4 class="home-facilities__features-title regular-title">
 						Quite Hours
@@ -99,7 +99,7 @@
 				</div>
 			</div>
 			<div class="general-features-card pointer-black swiper-slide swiper-slide-card">
-				<img class="general-features-card__features-left-img" src="/assets/images/features/pointer.png" alt="icon" />
+				<img class="general-features-card__features-left-img" src="/images/assets/images/features/pointer.png" alt="icon" />
 				<div class="general-features-card__features-card-text">
 					<h4 class="home-facilities__features-title regular-title">
 						Best Locations
@@ -113,7 +113,7 @@
 				</div>
 			</div>
 			<div class="general-features-card clock-stop-black swiper-slide swiper-slide-card">
-				<img class="general-features-card__features-left-img" src="/assets/images/features/clock_stop.png" alt="icon" />
+				<img class="general-features-card__features-left-img" src="/images/assets/images/features/clock_stop.png" alt="icon" />
 				<div class="general-features-card__features-card-text">
 					<h4 class="home-facilities__features-title regular-title">
 						Free Cancellation
@@ -126,7 +126,7 @@
 				</div>
 			</div>
 			<div class="general-features-card credit-card-black swiper-slide swiper-slide-card">
-				<img class="general-features-card__features-left-img" src="/assets/images/features/credit_card.png" alt="icon" />
+				<img class="general-features-card__features-left-img" src="/images/assets/images/features/credit_card.png" alt="icon" />
 				<div class="general-features-card__features-card-text">
 					<h4 class="home-facilities__features-title regular-title">
 						Payment Options
@@ -139,7 +139,7 @@
 				</div>
 			</div>
 			<div class="general-features-card award-black swiper-slide swiper-slide-card">
-				<img class="general-features-card__features-left-img" src="/assets/images/features/award.png" alt="icon" />
+				<img class="general-features-card__features-left-img" src="/images/assets/images/features/award.png" alt="icon" />
 				<div class="general-features-card__features-card-text">
 					<h4 class="home-facilities__features-title regular-title">
 						Special Offers
