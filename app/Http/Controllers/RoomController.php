@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 session_start();
 
-use Illuminate\Http\Request;
 use App\Models\Rooms;
 use Illuminate\Support\Facades\DB;
 
@@ -15,7 +14,12 @@ class RoomController extends Controller
         $rooms = Rooms
             ::join('photo', 'room.id', '=', 'photo.room_id')
             ->select('room.*', 'photo.URL')
+            ->where('room.status', '=', true)
+            ->where('room.discount', 0)
+            ->inRandomOrder()
+            ->limit(10)
             ->get();
+        session_destroy();
         return view('index', ['rooms' => $rooms]);
     }
     public function rooms()
