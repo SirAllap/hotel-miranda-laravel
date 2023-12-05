@@ -179,7 +179,24 @@
 @endforeach
 @endif
 
-@if (isset($confirmation) && $confirmation !== '')
+@if(session('confirmation'))
+<script>
+    Toastify({
+        text: "{{ session('confirmation') }}",
+        duration: 5000,
+        gravity: "bottom",
+        position: "left",
+        style: {
+            background: "{{ session('error') }}" ? "#de5777" : "#bead8e",
+            padding: "30px 50px 30px 50px",
+            fontSize: "1.5rem",
+            fontWeight: "bold",
+        }
+    }).showToast();
+</script>
+@endif
+
+@if (isset($confirmation) && $confirmation !== [])
 @foreach ($confirmation as $message)
 <script>
     Toastify({
