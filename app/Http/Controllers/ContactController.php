@@ -32,7 +32,7 @@ class ContactController extends Controller
                 'review_body' => $review_body,
             ]);
 
-            $confirmation = 'Thank you! Your review has been sent to our team.';
+            $confirmation = ['Thank you! Your review has been sent to our team.'];
             $error = false;
             return view('contact', ['confirmation' => $confirmation, 'error' => $error]);
         } else {
