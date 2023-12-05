@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 session_start();
 
+use Illuminate\Http\Request;
 use App\Models\Rooms;
 use Illuminate\Support\Facades\DB;
 
@@ -22,13 +23,14 @@ class RoomController extends Controller
         session_destroy();
         return view('index', ['rooms' => $rooms]);
     }
-    public function rooms()
+    public function rooms(Request $request)
     {
-        if (isset($_GET["trip-start"]) && isset($_GET["trip-end"])) {
+        if ($request->input('trip-start') && $request->input('trip-end')) {
 
-            $start = htmlspecialchars($_GET["trip-start"]);
+            $start = $request->input('trip-start');
             $_SESSION['start'] = $start;
-            $end = htmlspecialchars($_GET["trip-end"]);
+
+            $end = $request->input('trip-end');
             $_SESSION['end'] = $end;
 
             $rooms = Rooms
