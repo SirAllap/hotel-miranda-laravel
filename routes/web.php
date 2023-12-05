@@ -1,8 +1,8 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\OfferController;
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoomController;
 use App\Http\Controllers\RoomDetailsController;
 
@@ -17,15 +17,19 @@ use App\Http\Controllers\RoomDetailsController;
 |
 */
 
-Route::get('/', [RoomController::class, 'index'])->name('index');
+Route::controller(RoomController::class)->group(function () {
+    Route::get('/', 'index')->name('index');
+    Route::get('/rooms', 'rooms')->name('rooms');
+});
 
 Route::get('/about-us', function () {
     return view('about-us');
 })->name('about-us');
 
-Route::get('/rooms', [RoomController::class, 'rooms'])->name('rooms');
 
-Route::get('/room-details', [RoomDetailsController::class, 'show'])->name('room-details');
+Route::get('/room-details', [RoomDetailsController::class, 'show'])->name('room-details.show');
+
+Route::post('/', [RoomDetailsController::class, 'store'])->name('room-details.store');
 
 Route::get('/offers', [OfferController::class, 'offers'])->name('offers');
 
