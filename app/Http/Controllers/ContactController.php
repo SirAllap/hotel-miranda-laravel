@@ -34,7 +34,7 @@ class ContactController extends Controller
 
             $confirmation = ['Thank you! Your review has been sent to our team.'];
             $error = false;
-            return view('contact', ['confirmation' => $confirmation, 'error' => $error]);
+            return view('contact')->with(['confirmation' => $confirmation, 'error' => $error]);
         } else {
             return view('contact');
         }
