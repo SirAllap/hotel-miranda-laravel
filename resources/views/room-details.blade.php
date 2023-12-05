@@ -64,7 +64,8 @@
 			</button>
 		</form>
 		@else
-		<form action="/create-booking" method="post">
+		<form action="/" method="POST">
+			@csrf
 			<p>Check Availability</p>
 			<label for="">Check In</label>
 			<input name="trip-start" class=" room-details-intro__calendar-picker" type="date" value="{{$start}}" required />
