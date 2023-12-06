@@ -73,10 +73,10 @@
 	<div class="home-about__cards">
 		<div class="home-about__card home-about__card--topcard">
 			<section class="home-about__card-img home-about__card-img--crew">
-				<img src="images/assets/images/hotel_crew.jpeg" alt="a group of hotel stuff" />
+				<img src="/images/assets/images/hotel_crew.jpeg" alt="a group of hotel stuff" />
 			</section>
 			<section class="home-about__card-info home-about__card-info--topcard">
-				<img src="images/assets/images/strong_team.png" alt="a logo of a strong team" />
+				<img src="/images/assets/images/strong_team.png" alt="a logo of a strong team" />
 				<h1 class="home-about__card-text regular-new-title">
 					Strong Team
 				</h1>
@@ -88,10 +88,10 @@
 		</div>
 		<div class="home-about__card home-about__card--bottomcard">
 			<section class="home-about__card-img home-about__card-img--luxury">
-				<img src="images/assets/images/luxury_room.jpeg" alt="a group of hotel stuff" />
+				<img src="/images/assets/images/luxury_room.jpeg" alt="a group of hotel stuff" />
 			</section>
 			<section class="home-about__card-info home-about__card-info--variation">
-				<img src="images/assets/images/luxury_date_picker.png" alt="a logo of a strong team" />
+				<img src="/images/assets/images/luxury_date_picker.png" alt="a logo of a strong team" />
 				<h1 class="home-about__card-text regular-new-title">
 					Luxury Room
 				</h1>
@@ -115,7 +115,7 @@
 			<div class="swiper-wrapper">
 				@foreach ($rooms as $room)
 				<div class="home-rooms__card-container swiper-slide">
-					<img class="home-rooms__services-info" src="images/assets/images/miranda_services_info.png" alt="a serie of icons representing room services" />
+					<img class="home-rooms__services-info" src="/images/assets/images/miranda_services_info.png" alt="a serie of icons representing room services" />
 					<img class="home-rooms__slider--swiper-slidepic" src="{{$room['URL']}}" alt="" />
 					<div class="home-rooms__slider-info-card">
 						<h1 class="home-rooms__info-card-title regular-title">
@@ -260,7 +260,7 @@
 
 <main class="home-menu">
 	<div class="home-menu__icon-text">
-		<img class="home-menu__donut-img" src="images/assets/images/donut_icon.png" alt="a donut illustration" />
+		<img class="home-menu__donut-img" src="/images/assets/images/donut_icon.png" alt="a donut illustration" />
 		<h4 class="home-menu__text subtitle-trigger">MENU</h4>
 		<h1 class="home-menu__text-title big-title">Our Foods Menu</h1>
 	</div>
@@ -268,7 +268,7 @@
 		<div class="swiper-wrapper">
 			<div class="home-menu__food-items swiper-slide">
 				<div class="home-menu__food-item menu-item">
-					<img src="images/assets/images/food_menu/egg_bacon.jpg" alt="an egg and bacon plate" />
+					<img src="/images/assets/images/food_menu/egg_bacon.jpg" alt="an egg and bacon plate" />
 					<div class="home-menu__menu-item-text menu-item-text">
 						<h4>Egg & Bacon</h4>
 						<p>
@@ -278,7 +278,7 @@
 					</div>
 				</div>
 				<div class="home-menu__food-item menu-item">
-					<img src="images/assets/images/food_menu/tea_coffee.jpg" alt="a hot tea" />
+					<img src="/images/assets/images/food_menu/tea_coffee.jpg" alt="a hot tea" />
 					<div class="home-menu__menu-item-text menu-item-text">
 						<h4>Tea or Coffee</h4>
 						<p>
@@ -288,7 +288,7 @@
 					</div>
 				</div>
 				<div class="home-menu__food-item menu-item">
-					<img src="images/assets/images/food_menu/chia_oatmeal.jpg" alt="a chia oatmeal" />
+					<img src="/images/assets/images/food_menu/chia_oatmeal.jpg" alt="a chia oatmeal" />
 					<div class="home-menu__menu-item-text menu-item-text">
 						<h4>Chia Oatmeal</h4>
 						<p>
@@ -300,7 +300,7 @@
 			</div>
 			<div class="home-menu__food-items swiper-slide">
 				<div class="home-menu__food-item menu-item">
-					<img src="images/assets/images/food_menu/fruit_parfait.jpg" alt="a bowl of fruit" />
+					<img src="/images/assets/images/food_menu/fruit_parfait.jpg" alt="a bowl of fruit" />
 					<div class="home-menu__menu-item-text menu-item-text">
 						<h4>Fruit Parfait</h4>
 						<p>
@@ -310,7 +310,7 @@
 					</div>
 				</div>
 				<div class="home-menu__food-item menu-item">
-					<img src="images/assets/images/food_menu/marmelade_selection.jpg" alt="a photo of marmelades selection" />
+					<img src="/images/assets/images/food_menu/marmelade_selection.jpg" alt="a photo of marmelades selection" />
 					<div class="home-menu__menu-item-text menu-item-text">
 						<h4>Marmalade Selection</h4>
 						<p>
@@ -320,7 +320,7 @@
 					</div>
 				</div>
 				<div class="home-menu__food-item menu-item">
-					<img src="images/assets/images/food_menu/board_cheese.jpg" alt="a board of cheese" />
+					<img src="/images/assets/images/food_menu/board_cheese.jpg" alt="a board of cheese" />
 					<div class="home-menu__menu-item-text menu-item-text">
 						<h4>Cheese Plate</h4>
 						<p>
@@ -332,7 +332,7 @@
 			</div>
 			<div class="home-menu__food-items swiper-slide">
 				<div class="home-menu__food-item menu-item">
-					<img src="images/assets/images/food_menu/marmelade_selection.jpg" alt="a bowl of fruit" />
+					<img src="/images/assets/images/food_menu/marmelade_selection.jpg" alt="a bowl of fruit" />
 					<div class="home-menu__menu-item-text menu-item-text">
 						<h4>Fruit Parfait</h4>
 						<p>
@@ -342,7 +342,7 @@
 					</div>
 				</div>
 				<div class="home-menu__food-item menu-item">
-					<img src="images/assets/images/food_menu/marmelade_selection.jpg" alt="a photo of marmelades selection" />
+					<img src="/images/assets/images/food_menu/marmelade_selection.jpg" alt="a photo of marmelades selection" />
 					<div class="home-menu__menu-item-text menu-item-text">
 						<h4>Marmalade Selection</h4>
 						<p>
@@ -352,7 +352,7 @@
 					</div>
 				</div>
 				<div class="home-menu__food-item menu-item">
-					<img src="images/assets/images/food_menu/marmelade_selection.jpg" alt="a board of cheese" />
+					<img src="/images/assets/images/food_menu/marmelade_selection.jpg" alt="a board of cheese" />
 					<div class="home-menu__menu-item-text menu-item-text">
 						<h4>Cheese Plate</h4>
 						<p>
@@ -368,9 +368,9 @@
 	</div>
 	<div class="home-menu__restaurant-photos swiper swiper-restaurant-photos">
 		<div class="swiper-wrapper">
-			<img src="images/assets/images/food_menu/food_pic1.jpg" alt="a cheff finishing the plate presentation" class="home-menu__pic swiper-slide" />
-			<img src="images/assets/images/food_menu/food_pic2.jpg" alt="a buffet line of food" class="home-menu__pic swiper-slide" />
-			<img src="images/assets/images/food_menu/food_pic3.jpg" alt="a table with different teas/coffee and various snacks" class="home-menu__pic swiper-slide" />
+			<img src="/images/assets/images/food_menu/food_pic1.jpg" alt="a cheff finishing the plate presentation" class="home-menu__pic swiper-slide" />
+			<img src="/images/assets/images/food_menu/food_pic2.jpg" alt="a buffet line of food" class="home-menu__pic swiper-slide" />
+			<img src="/images/assets/images/food_menu/food_pic3.jpg" alt="a table with different teas/coffee and various snacks" class="home-menu__pic swiper-slide" />
 		</div>
 		<div class="swiper-pagination"></div>
 	</div>
@@ -379,19 +379,19 @@
 <main class="acheivements">
 	<div class="acheivements__acheivements-container">
 		<div class="acheivements__acheivements-item">
-			<img src="images/assets/images/achievements/84k.png" alt="" class="acheivements__acheivements-item-photo" />
+			<img src="/images/assets/images/achievements/84k.png" alt="" class="acheivements__acheivements-item-photo" />
 			<p>Projects are Completed</p>
 		</div>
 		<div class="acheivements__acheivements-item">
-			<img src="images/assets/images/achievements/10m.png" alt="" class="acheivements__acheivements-item-photo" />
+			<img src="/images/assets/images/achievements/10m.png" alt="" class="acheivements__acheivements-item-photo" />
 			<p>Active Backers Around World</p>
 		</div>
 		<div class="acheivements__acheivements-item">
-			<img src="images/assets/images/achievements/02k.png" alt="" class="acheivements__acheivements-item-photo" />
+			<img src="/images/assets/images/achievements/02k.png" alt="" class="acheivements__acheivements-item-photo" />
 			<p>Categories Served</p>
 		</div>
 		<div class="acheivements__acheivements-item">
-			<img src="images/assets/images/achievements/100m.png" alt="" class="acheivements__acheivements-item-photo" />
+			<img src="/images/assets/images/achievements/100m.png" alt="" class="acheivements__acheivements-item-photo" />
 			<p>Idea Raised Funds</p>
 		</div>
 	</div>

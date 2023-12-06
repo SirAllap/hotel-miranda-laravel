@@ -31,7 +31,7 @@
 				<div class="rooms-cards__card">
 					<img class="room-image" src="{{$room['URL']}}" alt="a picture of a hotel room" />
 					<div class="rooms-cards__card-service-info">
-						<img src="images/assets/images/miranda_services_info.png" alt="an illustration of the room services" />
+						<img src="/images/assets/images/miranda_services_info.png" alt="an illustration of the room services" />
 					</div>
 					<div class="rooms-cards__text-container">
 						<h4 class="small-title">{{$room['room_type']}}</h4>
@@ -39,12 +39,13 @@
 							{{$room['quick_description']}}
 						</p>
 						<span class="rooms-cards__text-frist-span price-amount">${{$room['price']}}/Night</span>&nbsp&nbsp&nbsp&nbsp
-						<form action="../room-details" method="get">
+						<a href="/room-details/{{$room['id']}}" class="rooms-cards__anchor-second-span">
 							<span class="rooms-cards__text-second-span">
-								<input type="hidden" name="room_id" value="{{$room['id']}}" />
-								<button type="submit">Booking Now</button>
+								<button class="card-button">
+									Booking Now
+								</button>
 							</span>
-						</form>
+						</a>
 					</div>
 				</div>
 			</div>

@@ -27,7 +27,7 @@
 
 <main class="contact-intro__cards">
 	<div class="contact-intro__card1">
-		<img src="images/assets/images/contact_icons/email_icon.png" alt="" />
+		<img src="/images/assets/images/contact_icons/email_icon.png" alt="" />
 		<div>
 			<h4 class="small-title">Hotel Address</h4>
 			<p class="filled-text">
@@ -36,7 +36,7 @@
 		</div>
 	</div>
 	<div class="contact-intro__card2">
-		<img src="images/assets/images/contact_icons/call_icon.png" alt="" />
+		<img src="/images/assets/images/contact_icons/call_icon.png" alt="" />
 		<div>
 			<h4 class="small-title">Phone Number</h4>
 			<p class="filled-text">+ 876 766 8675 765 6</p>
@@ -44,7 +44,7 @@
 		</div>
 	</div>
 	<div class="contact-intro__card3">
-		<img src="images/assets/images/contact_icons/address_icon.png" alt="" />
+		<img src="/images/assets/images/contact_icons/address_icon.png" alt="" />
 		<div>
 			<h4 class="small-title">Email</h4>
 			<p class="filled-text">info@webmail.com</p>
