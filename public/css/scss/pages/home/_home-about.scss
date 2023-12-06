@@ -107,7 +107,7 @@
             width: 748px;
             height: 610px;
             z-index: -1;
-            background: url("../../images/assets/images/background.png");
+            background: url("/images/assets/images/background.png");
             background-repeat: no-repeat;
             right: 30%;
             bottom: 36%;
@@ -117,7 +117,7 @@
             width: 1084px;
             height: 610px;
             z-index: -1;
-            background: url("../../images/assets/images/background.png");
+            background: url("/images/assets/images/background.png");
             background-repeat: no-repeat;
             position: absolute;
             right: 30%;
@@ -234,7 +234,7 @@
             padding: 0 35px 0 35px;
         }
         &--topcard {
-            background: url("../../images/assets/images/strong_team_background.png"), #fff;
+            background: url("/images/assets/images/strong_team_background.png"), #fff;
             background-repeat: no-repeat;
             background-position: right;
             background-position-y: 50px;

@@ -1,7 +1,7 @@
 .footer {
     padding: 20px;
     color: $color-softGreyText;
-    background: url("../../images/assets/images/footer_back2.png"), $color-white;
+    background: url("/images/assets/images/footer_back2.png"), $color-white;
     background-repeat: no-repeat;
     background-size: auto 100%;
     @include desktop {
@@ -162,30 +162,30 @@
 #social-fb {
     transition: all 0.3s;
     &:hover {
-        content: url("../../images/assets/images/social_btn/fb_social_gold.png");
+        content: url("/images/assets/images/social_btn/fb_social_gold.png");
     }
 }
 #social-tw {
     transition: all 0.3s;
     &:hover {
-        content: url("../../images/assets/images/social_btn/tw_social_gold.png");
+        content: url("/images/assets/images/social_btn/tw_social_gold.png");
     }
 }
 #social-be {
     transition: all 0.3s;
     &:hover {
-        content: url("../../images/assets/images/social_btn/be_social_gold.png");
+        content: url("/images/assets/images/social_btn/be_social_gold.png");
     }
 }
 #social-in {
     transition: all 0.3s;
     &:hover {
-        content: url("../../images/assets/images/social_btn/in_social_gold.png");
+        content: url("/images/assets/images/social_btn/in_social_gold.png");
     }
 }
 #social-yt {
     transition: all 0.3s;
     &:hover {
-        content: url("../../images/assets/images/social_btn/yt_social_gold.png");
+        content: url("/images/assets/images/social_btn/yt_social_gold.png");
     }
 }
