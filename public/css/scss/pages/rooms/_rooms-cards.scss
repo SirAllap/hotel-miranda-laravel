@@ -43,6 +43,7 @@
             border: 2px solid $color-softGreyText;
         }
         button {
+            cursor: pointer;
             border: 2px solid $color-verySoftGrey;
             transition: 0.3s all;
             text-decoration: none;
