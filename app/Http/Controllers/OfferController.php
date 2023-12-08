@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Rooms;
+use App\Models\Room;
 
 class OfferController extends Controller
 {
     public function offers()
     {
-        $roomsWithDiscounts = Rooms
+        $roomsWithDiscounts = Room
             ::join('photo', 'room.id', '=', 'photo.room_id')
             ->select('room.*', 'photo.URL')
             ->where('room.status', '=', true)
@@ -18,7 +17,7 @@ class OfferController extends Controller
             ->limit(5)
             ->get();
 
-        $roomsWithoutDiscounts = Rooms
+        $roomsWithoutDiscounts = Room
             ::join('photo', 'room.id', '=', 'photo.room_id')
             ->select('room.*', 'photo.URL')
             ->where('room.status', '=', true)

@@ -5,14 +5,14 @@ namespace App\Http\Controllers;
 session_start();
 
 use Illuminate\Http\Request;
-use App\Models\Rooms;
+use App\Models\Room;
 
 
 class RoomController extends Controller
 {
     public function index()
     {
-        $rooms = Rooms
+        $rooms = Room
             ::join('photo', 'room.id', '=', 'photo.room_id')
             ->select('room.*', 'photo.URL')
             ->where('room.status', '=', true)
@@ -30,9 +30,9 @@ class RoomController extends Controller
             $_SESSION['start'] = $start;
             $end = $request->input('trip-end');
             $_SESSION['end'] = $end;
-            $rooms = Rooms::all_rooms_availability($start, $end);
+            $rooms = Room::all_rooms_availability($start, $end);
         } else {
-            $rooms = Rooms
+            $rooms = Room
                 ::join('photo', 'room.id', '=', 'photo.room_id')
                 ->select('room.*', 'photo.URL')
                 ->where('room.status', '=', true)

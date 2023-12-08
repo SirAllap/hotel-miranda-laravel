@@ -6,10 +6,10 @@ session_start();
 
 use Illuminate\Http\Request;
 use App\Models\Rooms;
-use App\Models\Bookings;
+use App\Models\Booking;
 use Illuminate\Support\Facades\DB;
 
-class RoomDetailsController extends Controller
+class BookingController extends Controller
 {
     /**
      * Store a newly created resource in storage.
@@ -33,7 +33,7 @@ class RoomDetailsController extends Controller
         $special_request = $request->input('special-request');
         $id = $_SESSION['id'];
 
-        Bookings::create([
+        Booking::create([
             'guest' => $guest_name,
             'phone_number' => $phone_number,
             'email' => $email,
