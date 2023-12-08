@@ -13,15 +13,15 @@ class RoomController extends Controller
 {
     public function show_all()
     {
-        $rooms = Room
-            ::join('photo', 'room.id', '=', 'photo.room_id')
-            ->select('room.*', 'photo.URL')
-            ->where('room.status', '=', true)
-            ->where('room.discount', 0)
+        session_destroy();
+        $rooms = Room::where('status', true)
+            ->with('photos')
             ->inRandomOrder()
             ->limit(10)
             ->get();
-        session_destroy();
+
+        $rooms = Room::apply_discount_multiple_rooms($rooms);
+
         return view('index', ['rooms' => $rooms]);
     }
     public function show_rooms_by_date(Request $request)
@@ -37,10 +37,12 @@ class RoomController extends Controller
             $rooms = Room
                 ::join('photo', 'room.id', '=', 'photo.room_id')
                 ->select('room.*', 'photo.URL')
-                ->where('room.status', '=', true)
-                ->where('room.discount', '=', 0)
+                ->where('room.status', true)
                 ->get();
         }
+
+        $rooms = Room::apply_discount_multiple_rooms($rooms);
+
         return view('rooms', ['rooms' => $rooms]);
     }
     public function show_one($id, Request $request)
@@ -54,7 +56,7 @@ class RoomController extends Controller
             $rooms = Room
                 ::join('photo', 'room.id', '=', 'photo.room_id')
                 ->select('room.*', 'photo.URL')
-                ->where('room.status', '=', true)
+                ->where('room.status', true)
                 ->where('room.discount', 0)
                 ->inRandomOrder()
                 ->limit(10)
@@ -99,7 +101,7 @@ class RoomController extends Controller
         $roomsWithDiscounts = Room
             ::join('photo', 'room.id', '=', 'photo.room_id')
             ->select('room.*', 'photo.URL')
-            ->where('room.status', '=', true)
+            ->where('room.status', true)
             ->where('room.discount', '>', 0)
             ->inRandomOrder()
             ->limit(5)
@@ -108,13 +110,13 @@ class RoomController extends Controller
         $roomsWithoutDiscounts = Room
             ::join('photo', 'room.id', '=', 'photo.room_id')
             ->select('room.*', 'photo.URL')
-            ->where('room.status', '=', true)
-            ->where('room.discount', '=', 0)
+            ->where('room.status', true)
+            ->where('room.discount', 0)
             ->inRandomOrder()
             ->get();
 
-        $discountedRooms = Room::apply_discount_multiple_rooms($roomsWithDiscounts);
+        $roomsWithDiscounts = Room::apply_discount_multiple_rooms($roomsWithDiscounts);
 
-        return view('offers', ['roomsWithDiscounts' => $discountedRooms, 'roomsWithoutDiscounts' => $roomsWithoutDiscounts]);
+        return view('offers', ['roomsWithDiscounts' => $roomsWithDiscounts, 'roomsWithoutDiscounts' => $roomsWithoutDiscounts]);
     }
 }
