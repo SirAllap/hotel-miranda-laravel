@@ -29,5 +29,7 @@ Route::get('/about-us', function () {
     return view('about-us');
 })->name('about-us');
 
-
-Route::match(['get', 'post'], '/contact', [ContactController::class, 'contact'])->name('contact');
+Route::controller(ContactController::class)->group(function () {
+    Route::get('/contact', 'show')->name('contact');
+    Route::post('/contact', 'store')->name('contact');
+});
