@@ -11,7 +11,6 @@ class Room extends Model
 {
     use HasFactory;
     protected $table = 'room';
-
     public function bookings(): HasMany
     {
         return $this->hasMany(Booking::class);
@@ -63,5 +62,19 @@ class Room extends Model
             )
             ->groupBy('room.id', 'photo.URL')
             ->first();
+    }
+
+    public static function apply_discount_multiple_rooms($rooms)
+    {
+        foreach ($rooms as &$room) {
+            $room['priceWithDiscount'] = intval($room['price'] - ($room['price'] * ($room['discount'] / 100)));
+        }
+        return $rooms;
+    }
+
+    public static function apply_discount_single_room($room)
+    {
+        $room['priceWithDiscount'] = intval($room['price'] - ($room['price'] * ($room['discount'] / 100)));
+        return $room;
     }
 }
