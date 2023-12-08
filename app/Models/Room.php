@@ -17,7 +17,7 @@ class Room extends Model
         return $this->hasMany(Booking::class);
     }
 
-    public function room_photos(): HasMany
+    public function photos(): HasMany
     {
         return $this->hasMany(Photo::class);
     }
@@ -52,7 +52,7 @@ class Room extends Model
             ->join('photo', 'room.id', '=', 'photo.room_id')
             ->join('amenities_has_room as ahr', 'room.id', '=', 'ahr.room_id')
             ->join('amenity as a', 'ahr.amenity_id', '=', 'a.id')
-            ->where('room.id', '=', $id)
+            ->where('room.id', $id)
             ->whereNotExists(
                 function ($query) use ($check_in, $check_out) {
                     $query->select(DB::raw(1))
