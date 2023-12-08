@@ -11,26 +11,14 @@ class ContactController extends Controller
     {
         if ($request->isMethod('post')) {
             $request->validate([
-                'name' => 'required|string',
+                'full_name' => 'required|string',
                 'email' => 'required|string|email',
-                'phone' => 'required|string',
-                'subject' => 'required|string',
-                'message' => 'required|string',
+                'phone_number' => 'required|string',
+                'subject_of_review' => 'required|string',
+                'review_body' => 'required|string',
             ]);
 
-            $full_name = $request->input('name');
-            $email = $request->input('email');
-            $phone_number = $request->input('phone');
-            $subject_of_review = $request->input('subject');
-            $review_body = $request->input('message');
-
-            Contact::create([
-                'full_name' => $full_name,
-                'email' => $email,
-                'phone_number' => $phone_number,
-                'subject_of_review' => $subject_of_review,
-                'review_body' => $review_body,
-            ]);
+            Contact::create($request->all());
 
             $confirmation = ['Thank you! Your review has been sent to our team.'];
             $error = false;

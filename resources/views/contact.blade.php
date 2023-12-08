@@ -61,12 +61,12 @@
 	<div class="contact-intro__form-wrapper">
 		<form method="post" action="/contact">
 			@csrf
-			<input id="input-name" name="name" placeholder="Your full name" type="text" />
-			<input id="input-phone" name="phone" placeholder="Add phone number" type="text" />
+			<input id="input-name" name="full_name" placeholder="Your full name" type="text" />
+			<input id="input-phone" name="phone_number" placeholder="Add phone number" type="text" />
 			<input id="input-email" name="email" placeholder="Enter email address" type="text" />
-			<input id="input-subject" name="subject" placeholder="Enter subject" type="text" />
+			<input id="input-subject" name="subject_of_review" placeholder="Enter subject" type="text" />
 			<div class="contact-intro__form-wrapper">
-				<textarea name="message" placeholder="Enter message" id="input-messsage-body" cols="30" rows="10"></textarea>
+				<textarea name="review_body" placeholder="Enter message" id="input-messsage-body" cols="30" rows="10"></textarea>
 			</div>
 			<button type="submit" class="contact-intro__form-button button button--beige button--auto">
 				SEND
