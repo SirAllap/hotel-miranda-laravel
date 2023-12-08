@@ -639,6 +639,12 @@ Common breakpoints:
   line-height: 43px;
   font-weight: 700;
 }
+.price-amount--discount {
+  color: #de5777;
+}
+.price-amount--small {
+  font-size: 20px;
+}
 
 .price-nigth {
   color: #bead8e;
@@ -646,6 +652,9 @@ Common breakpoints:
   font-size: 23px;
   line-height: 43px;
   font-weight: 400;
+}
+.price-nigth--discount {
+  color: #de5777;
 }
 
 .price-amount-small {

@@ -116,7 +116,9 @@
 				@foreach ($rooms as $room)
 				<div class="home-rooms__card-container swiper-slide">
 					<img class="home-rooms__services-info" src="/images/assets/images/miranda_services_info.png" alt="a serie of icons representing room services" />
-					<img class="home-rooms__slider--swiper-slidepic" src="{{$room['URL']}}" alt="" />
+					@foreach($room->photos as $photo)
+					<img class="home-rooms__slider--swiper-slidepic" src="{{ $photo->URL }}" alt="" />
+					@endforeach
 					<div class="home-rooms__slider-info-card">
 						<h1 class="home-rooms__info-card-title regular-title">
 							{{$room['room_type']}}
@@ -125,7 +127,9 @@
 							{{$room['quick_description']}}
 						</h4>
 						<div class="home-rooms__info-card-price-amount-nigth">
-							<span class="home-rooms__info-card-price price-amount">${{$room['price']}}</span><span class="home-rooms__info-card-price price-nigth">/Night</span>
+							<span class="'home-rooms__info-card-price' {{ $room['discount'] ? 'price-amount price-amount--discount' : 'price-amount' }}">
+								${{ $room['priceWithDiscount'] }}</span>
+							<span class="'home-rooms__info-card-price' {{$room['discount'] ? 'price-nigth price-nigth--discount' : 'price-nigth'}}">/Night</span>
 						</div>
 					</div>
 				</div>
