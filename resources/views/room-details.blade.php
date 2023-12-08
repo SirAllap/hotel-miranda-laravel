@@ -68,17 +68,18 @@
 			@csrf
 			<p>Check Availability</p>
 			<label for="">Check In</label>
-			<input name="trip-start" class=" room-details-intro__calendar-picker" type="date" value="{{$start}}" required />
+			<input name="check_in" class=" room-details-intro__calendar-picker" type="date" value="{{$start}}" required />
 			<label for="">Check Out</label>
-			<input name="trip-end" class="room-details-intro__calendar-picker" type="date" value="{{$end}}" required />
+			<input name="check_out" class="room-details-intro__calendar-picker" type="date" value="{{$end}}" required />
 			<label for="">Full Name</label>
-			<input name="name" id="input-details-name" name="full-name" placeholder="Your full name" type="text" required />
+			<input name="guest" id="input-details-name" name="full-name" placeholder="Your full name" type="text" required />
 			<label for="">Email</label>
 			<input name="email" id="input-details-email" name="email" placeholder="Enter email address" type="text" required />
 			<label for="">Phone</label>
-			<input name="phone" id="input-details-phone" name="phone" placeholder="Add phone number" type="text" required />
+			<input name="phone_number" id="input-details-phone" name="phone" placeholder="Add phone number" type="text" required />
 			<label for="">Special Request</label>
-			<input name="special-request" id="input-details-special-request" placeholder="Enter subject" type="text" required />
+			<input name="special_request" id="input-details-special-request" placeholder="Enter subject" type="text" required />
+			<input type="hidden" name="room_id" value="{{ $room['id'] }}" />
 			<button type="submit" class="button button--beige button--auto">
 				Book Now!
 			</button>
