@@ -11,9 +11,15 @@ class Room extends Model
 {
     use HasFactory;
     protected $table = 'room';
+
     public function bookings(): HasMany
     {
         return $this->hasMany(Booking::class);
+    }
+
+    public function room_photos(): HasMany
+    {
+        return $this->hasMany(Photo::class);
     }
 
     public static function all_rooms_availability($check_in, $check_out)
