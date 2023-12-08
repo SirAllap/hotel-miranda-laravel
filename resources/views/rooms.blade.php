@@ -38,7 +38,7 @@
 						<p class="filled-text">
 							{{$room['quick_description']}}
 						</p>
-						<span class="rooms-cards__text-frist-span price-amount">${{$room['price']}}/Night</span>&nbsp&nbsp&nbsp&nbsp
+						<span class="'rooms-cards__text-frist-span' {{$room['discount'] ? 'price-amount price-amount--small price-amount--discount' : 'price-amount price-amount--small'}}">${{$room['priceWithDiscount']}}/Night</span>&nbsp&nbsp&nbsp&nbsp
 						<a href="/room-details/{{$room['id']}}" class="rooms-cards__anchor-second-span">
 							<span class="rooms-cards__text-second-span">
 								<button class="card-button">
