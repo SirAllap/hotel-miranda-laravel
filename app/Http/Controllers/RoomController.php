@@ -74,22 +74,23 @@ class RoomController extends Controller
                 ->join('photo', 'room.id', '=', 'photo.room_id')
                 ->join('amenities_has_room as ahr', 'room.id', '=', 'ahr.room_id')
                 ->join('amenity as a', 'ahr.amenity_id', '=', 'a.id')
-                ->where('room.id', '=', $id)
+                ->where('room.id', $id)
                 ->groupBy('room.id', 'photo.URL')
                 ->first();
 
             $rooms = Room
                 ::join('photo', 'room.id', '=', 'photo.room_id')
                 ->select('room.*', 'photo.URL')
-                ->where('room.status', '=', true)
+                ->where('room.status', true)
                 ->where('room.discount', 0)
                 ->inRandomOrder()
                 ->limit(10)
                 ->get();
 
             if (isset($room['discount'])) {
-                $room['priceWithDiscount'] = intval($room['price'] - ($room['price'] * ($room['discount'] / 100)));
+                $room = Room::apply_discount_single_room($room);
             }
+
             return view('room-details', ['room' => $room, 'rooms' => $rooms, 'start' => $trip_start, 'end' => $trip_end]);
         }
     }
@@ -112,10 +113,8 @@ class RoomController extends Controller
             ->inRandomOrder()
             ->get();
 
-        foreach ($roomsWithDiscounts as &$room) {
-            $room['priceWithDiscount'] = intval($room['price'] - ($room['price'] * ($room['discount'] / 100)));
-        }
+        $discountedRooms = Room::apply_discount_multiple_rooms($roomsWithDiscounts);
 
-        return view('offers', ['roomsWithDiscounts' => $roomsWithDiscounts, 'roomsWithoutDiscounts' => $roomsWithoutDiscounts]);
+        return view('offers', ['roomsWithDiscounts' => $discountedRooms, 'roomsWithoutDiscounts' => $roomsWithoutDiscounts]);
     }
 }
