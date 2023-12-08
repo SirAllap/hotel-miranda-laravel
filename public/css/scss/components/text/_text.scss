@@ -46,6 +46,12 @@
     font-size: 45px;
     line-height: 43px;
     font-weight: $strong-weight;
+    &--discount {
+        color: $color-redDiscount;
+    }
+    &--small {
+        font-size: 20px;
+    }
 }
 .price-nigth {
     color: $color-beish;
@@ -53,6 +59,9 @@
     font-size: 23px;
     line-height: 43px;
     font-weight: $soft-weight;
+    &--discount {
+        color: $color-redDiscount;
+    }
 }
 .price-amount-small {
     color: $color-beish;
