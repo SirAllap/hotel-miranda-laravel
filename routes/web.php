@@ -18,18 +18,16 @@ use App\Http\Controllers\BookingController;
 */
 
 Route::controller(RoomController::class)->group(function () {
-    Route::get('/', 'index')->name('index');
-    Route::get('/rooms', 'rooms')->name('rooms');
+    Route::get('/', 'show_all')->name('index');
+    Route::get('/rooms', 'show_rooms_by_date')->name('rooms');
+    Route::get('/room-details/{id}', 'show_one')->name('room-details');
+    Route::post('/', [BookingController::class, 'store'])->name('room-details');
+    Route::get('/offers', 'show_rooms_with_offer')->name('offers');
 });
 
 Route::get('/about-us', function () {
     return view('about-us');
 })->name('about-us');
 
-Route::get('/room-details/{id}', [BookingController::class, 'show'])->name('room-details.show');
-
-Route::post('/', [BookingController::class, 'store'])->name('room-details.store');
-
-Route::get('/offers', [OfferController::class, 'offers'])->name('offers');
 
 Route::match(['get', 'post'], '/contact', [ContactController::class, 'contact'])->name('contact');
