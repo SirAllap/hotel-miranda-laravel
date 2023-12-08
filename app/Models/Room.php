@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Facades\DB;
 
-class Rooms extends Model
+class Room extends Model
 {
     use HasFactory;
     protected $table = 'room';
@@ -19,7 +19,7 @@ class Rooms extends Model
 
     public static function all_rooms_availability($check_in, $check_out)
     {
-        return Rooms
+        return Room
             ::select('room.*', 'photo.URL')
             ->join('photo', 'room.id', '=', 'photo.room_id')
             ->where('room.status', true)
@@ -42,7 +42,7 @@ class Rooms extends Model
 
     public static function single_room_availability($id, $check_in, $check_out)
     {
-        return Rooms
+        return Room
             ::select('room.*', 'photo.URL', DB::raw("GROUP_CONCAT(a.amenities SEPARATOR ', ') AS all_amenities"))
             ->join('photo', 'room.id', '=', 'photo.room_id')
             ->join('amenities_has_room as ahr', 'room.id', '=', 'ahr.room_id')
