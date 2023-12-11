@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\RoomController;
+use App\Http\Controllers\BookingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +17,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::controller(RoomController::class)->group(function () {
+    Route::get('/', 'show_all')->name('index');
+    Route::get('/rooms', 'show_rooms_by_date')->name('rooms');
+    Route::get('/room-details/{id}', 'show_one')->name('room-details');
+    Route::post('/', [BookingController::class, 'store'])->name('room-details');
+    Route::get('/offers', 'show_rooms_with_offer')->name('offers');
+});
+
+Route::get('/about-us', function () {
+    return view('about-us');
+})->name('about-us');
+
+Route::controller(ContactController::class)->group(function () {
+    Route::get('/contact', 'show')->name('contact');
+    Route::post('/contact', 'store')->name('contact');
 });
 
 Route::get('/dashboard', function () {
@@ -28,4 +44,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
