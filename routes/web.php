@@ -1,10 +1,7 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ContactController;
-use App\Http\Controllers\OfferController;
-use App\Http\Controllers\RoomController;
-use App\Http\Controllers\BookingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,19 +14,18 @@ use App\Http\Controllers\BookingController;
 |
 */
 
-Route::controller(RoomController::class)->group(function () {
-    Route::get('/', 'show_all')->name('index');
-    Route::get('/rooms', 'show_rooms_by_date')->name('rooms');
-    Route::get('/room-details/{id}', 'show_one')->name('room-details');
-    Route::post('/', [BookingController::class, 'store'])->name('room-details');
-    Route::get('/offers', 'show_rooms_with_offer')->name('offers');
+Route::get('/', function () {
+    return view('welcome');
 });
 
-Route::get('/about-us', function () {
-    return view('about-us');
-})->name('about-us');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::controller(ContactController::class)->group(function () {
-    Route::get('/contact', 'show')->name('contact');
-    Route::post('/contact', 'store')->name('contact');
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+require __DIR__.'/auth.php';
