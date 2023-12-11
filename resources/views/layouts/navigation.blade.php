@@ -75,7 +75,12 @@
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('room-service')" :active="request()->routeIs('room-service')">
-                {{ __('Order') }}
+                {{ __('New Order') }}
+            </x-responsive-nav-link>
+        </div>
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link :href="route('orders')" :active="request()->routeIs('orders')">
+                {{ __('Orders') }}
             </x-responsive-nav-link>
         </div>
 
