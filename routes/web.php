@@ -34,9 +34,13 @@ Route::controller(ContactController::class)->group(function () {
     Route::post('/contact', 'store')->name('contact');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/room-service', function () {
+    return view('room-service');
+})->middleware(['auth', 'verified'])->name('room-service');
+
+Route::get('/room-service/orders', function () {
+    return view('orders');
+})->middleware(['auth', 'verified'])->name('orders');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
