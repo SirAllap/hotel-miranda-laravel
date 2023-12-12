@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Order;
+use App\Models\Room;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -14,7 +15,11 @@ class OrderController extends Controller
     public function index()
     {
         $id = Auth::id();
-        $orders = Order::where('user_id', $id)->get();
+        $orders = Order::where('user_id', $id)
+            ->join('room as r', 'orders.room_id', '=', 'r.id')
+            ->select('r.room_number', 'orders.*')
+            ->get();
+
         return view('orders', ['orders' => $orders]);
     }
 
@@ -37,19 +42,17 @@ class OrderController extends Controller
             'description' => 'required|string',
             'user_id' => 'required|string|integer',
         ]);
-
         Order::create($request->all());
-
-
         return redirect('room-service/orders');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show()
     {
-        //
+        $availableRooms = Room::all();
+        return view('room-service', ['availableRooms' => $availableRooms]);
     }
 
     /**
@@ -67,9 +70,7 @@ class OrderController extends Controller
     {
         $id = $request->input('order_id');
         $order = Order::find($id);
-
         $order->update($request->all());
-
         return redirect('room-service/orders');
     }
 
