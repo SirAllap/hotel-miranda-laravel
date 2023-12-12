@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Order;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
 {
@@ -11,7 +13,9 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+        $id = Auth::id();
+        $orders = Order::where('user_id', $id)->get();
+        return view('orders', ['orders' => $orders]);
     }
 
     /**
@@ -27,7 +31,17 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'room_id' => 'required|integer',
+            'type' => 'required|string',
+            'description' => 'required|string',
+            'user_id' => 'required|string|integer',
+        ]);
+
+        Order::create($request->all());
+
+
+        return redirect('room-service/orders');
     }
 
     /**
@@ -49,16 +63,23 @@ class OrderController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request)
     {
-        //
+        $id = $request->input('order_id');
+        $order = Order::find($id);
+
+        $order->update($request->all());
+
+        return redirect('room-service/orders');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Request $request)
     {
-        //
+        $id = $request->input('order_id');
+        Order::destroy($id);
+        return redirect('room-service/orders');
     }
 }
