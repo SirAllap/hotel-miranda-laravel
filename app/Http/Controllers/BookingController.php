@@ -24,7 +24,7 @@ class BookingController extends Controller
             'room_id' => 'required|integer',
         ]);
 
-        Booking::created($request->all());
+        Booking::create($request->all());
 
         $confirmation = 'Thank you for your request. We have received it correctly. Someone from our Team will get back to you very soon.';
         $error = false;
