@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\RoomController;
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,13 +35,18 @@ Route::controller(ContactController::class)->group(function () {
     Route::post('/contact', 'store')->name('contact');
 });
 
+
 Route::get('/room-service', function () {
     return view('room-service');
 })->middleware(['auth', 'verified'])->name('room-service');
 
-Route::get('/room-service/orders', function () {
-    return view('orders');
-})->middleware(['auth', 'verified'])->name('orders');
+Route::controller(OrderController::class)->group(function () {
+    Route::get('/room-service/orders', 'index')->middleware(['auth', 'verified'])->name('orders');
+    Route::post('/room-service/orders', 'store')->middleware(['auth', 'verified'])->name('orders');
+    Route::delete('/room-service/orders', 'destroy')->middleware(['auth', 'verified'])->name('orders');
+
+    Route::put('/room-service/orders', 'update')->middleware(['auth', 'verified'])->name('orders');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
