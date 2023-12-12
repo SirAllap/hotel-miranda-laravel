@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->enum('type', ['food', 'other']);
+            $table->enum('type', ['Food', 'Other']);
             $table->string('description');
             $table->timestamps();
 
