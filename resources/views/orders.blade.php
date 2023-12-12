@@ -40,7 +40,7 @@
                                     @csrf
                                     @method('PUT')
                                     <td scope=" row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">
-                                        {{ $order->room_id }}
+                                        {{$order->room_number}}
                                     </td>
                                     <td class="px-6 py-4 text-center">
                                         <select id="{{ $order->id }}-type" name="type" class="border-gray-300 rounded-md block w-full p-3 disabled:border-transparent !disabled:border-b sm:rounded-lg disabled:text-center disabled:bg-transparent" value="{{ $order->type }}" disabled>
