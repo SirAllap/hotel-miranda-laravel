@@ -20,7 +20,9 @@
     <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
         <div>
             <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+                <!-- <x-application-logo class="w-20 h-20 fill-current text-gray-500" /> -->
+                <img class="h-20" src="/images/assets/images/miranda_logo.png" alt="an image of the logo" />
+                <p class="text-xl font-bold text-gray-700 mt-3">Welcome to your virtual Room Service</p>
             </a>
         </div>
 
