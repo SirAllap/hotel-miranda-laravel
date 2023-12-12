@@ -6,10 +6,10 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('index') }}">
-                        <img style="width: 60px;" src="{{ URL::asset('/images/assets/images/miranda_h_logo.png');}}" alt="an image of the logo" />
+                        <img class="w-10 transition-all shadow-xl hover:shadow-none hover:scale-125" src="{{ URL::asset('/images/assets/images/miranda_h_logo.png');}}" alt="an image of the logo" />
                     </a>
                     <a href="{{ route('index') }}">
-                        <img style="width: 90px;" src="/images/assets/images/miranda_words_logo.png" alt="an image of the logo" />
+                        <img class="w-20 ml-3" src="/images/assets/images/miranda_words_logo.png" alt="an image of the logo" />
                     </a>
                 </div>
 
