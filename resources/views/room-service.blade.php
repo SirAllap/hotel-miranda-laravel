@@ -13,21 +13,19 @@
                 <!-- Room number -->
                 <div>
                     <x-input-label for="room_id" :value="__('Room Number:')" />
-                    <select id="type" name="room_id" class="border-gray-300 rounded-md block w-full p-3" :value="old('type')" required autofocus>
-                        <option value="" selected disabled>Select your room number:</option>
-                        @if(isset($availableRooms))
-                        @foreach($availableRooms as $availableRoom)
-                        <option value="{{$availableRoom->id}}">Room number: {{$availableRoom->room_number}}</option>
-                        @endforeach
-                        @endif
-                    </select>
+                    @if(isset($user) && isset($room))
+                    <div class="mt-2 border border-gray-300 w-20 bg-white p-2 rounded-md">
+                        <p class="text-xl ml-1">{{ $user->room_number }}</p>
+                    </div>
+                    <input type="hidden" name="room_id" value="{{ $room->id }}">
+                    @endif
                 </div>
 
                 <!-- Type -->
                 <div class="mt-4">
                     <x-input-label for="type" :value="__('Order type:')" />
 
-                    <select id="type" name="type" class="border-gray-300 rounded-md block w-full p-3" :value="old('type')" required autofocus>
+                    <select id="type" name="type" class="mt-2 border-gray-300 rounded-md block w-full p-3" :value="old('type')" required autofocus>
                         <option value="" selected disabled>Select the order type:</option>
                         <option value="Food">Food</option>
 
@@ -39,7 +37,7 @@
                 <div class="mt-4">
                     <x-input-label for="description" :value="__('Whats on your mind:')" />
 
-                    <textarea id="description" rows="4" placeholder="e.j: I'd like a big plate of oysters" class="resize-none border-gray-300 rounded-md block w-full" type="text" name="description" :value="old('description')" required autofocus></textarea>
+                    <textarea id="description" rows="4" placeholder="e.j: I'd like a big plate of oysters" class="mt-2 resize-none border-gray-300 rounded-md block w-full" type="text" name="description" :value="old('description')" required autofocus></textarea>
 
                     <x-input-error :messages=" $errors->get('description')" class="mt-2" />
                 </div>
