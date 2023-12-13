@@ -13,14 +13,10 @@
                 <!-- Room number -->
                 <div>
                     <x-input-label for="room_id" :value="__('Room Number:')" />
-                    <select id="type" name="room_id" class="border-gray-300 rounded-md block w-full p-3" :value="old('type')" required autofocus>
-                        <option value="" selected disabled>Select your room number:</option>
-                        @if(isset($availableRooms))
-                        @foreach($availableRooms as $availableRoom)
-                        <option value="{{$availableRoom->id}}">Room number: {{$availableRoom->room_number}}</option>
-                        @endforeach
-                        @endif
-                    </select>
+                    @if(isset($user) && isset($room))
+                    <p>{{ $user->room_number }}</p>
+                    <input type="hidden" name="room_id" value="{{ $room->id }}">
+                    @endif
                 </div>
 
                 <!-- Type -->
