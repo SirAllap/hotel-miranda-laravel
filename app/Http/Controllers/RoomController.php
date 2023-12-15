@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-session_start();
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -13,7 +12,7 @@ class RoomController extends Controller
 {
     public function show_all()
     {
-        session_destroy();
+        session()->flush();
         $rooms = Room::where('status', true)
             ->with('photos')
             ->inRandomOrder()
@@ -28,9 +27,9 @@ class RoomController extends Controller
     {
         if ($request->input('trip-start') && $request->input('trip-end')) {
             $start = $request->input('trip-start');
-            $_SESSION['start'] = $start;
+            session(['start' => $start]);
             $end = $request->input('trip-end');
-            $_SESSION['end'] = $end;
+            session(['end' => $end]);
 
             $rooms = Room::all_rooms_availability($start, $end);
         } else {
@@ -67,9 +66,9 @@ class RoomController extends Controller
             }
             return view('room-details', ['room' => $room, 'rooms' => $rooms, 'start' => $trip_start, 'end' => $trip_end]);
         } else {
-            $_SESSION['id'] = $id;
-            isset($_SESSION['start']) ? $trip_start = $_SESSION['start'] : $trip_start = null;
-            isset($_SESSION['end']) ? $trip_end = $_SESSION['end'] : $trip_end = null;
+            session(['id' => $id]);
+            session('start') ? $trip_start = session('start') : $trip_start = null;
+            session('end') ? $trip_end = session('end') : $trip_end = null;
 
             $room = Room
                 ::select('room.*', 'photo.URL', DB::raw("GROUP_CONCAT(a.amenities SEPARATOR ', ') AS all_amenities"))
