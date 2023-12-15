@@ -36,7 +36,7 @@
                             @if(isset($orders))
                             @foreach ($orders as $order)
                             <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-                                <form method="POST" action="/room-service/orders">
+                                <form method="POST" action="{{ route('orders.update', $order->id) }}">
                                     @csrf
                                     @method('PUT')
                                     <td scope=" row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">
@@ -56,7 +56,6 @@
                                         {{ $order->created_at }}
                                     </td>
                                     <td class="px-6 py-4 text-center font-mono">
-                                        <input type="hidden" name="order_id" value="{{ $order->id }}">
                                         <x-secondary-button type="button" id="{{ $order->id }}-edit" onclick="editInputs('{{$order->id}}')">
                                             Edit
                                         </x-secondary-button>
@@ -66,10 +65,9 @@
                                     </td>
                                 </form>
                                 <td class=" px-6 py-4 text-center font-mono">
-                                    <form method="POST">
+                                    <form method="POST" action="{{ route('orders.destroy', $order->id) }}">
                                         @csrf
                                         @method('DELETE')
-                                        <input type="hidden" name="order_id" value="{{ $order->id }}">
                                         <x-primary-button>
                                             Delete
                                         </x-primary-button>

@@ -44,8 +44,8 @@ Route::middleware('auth')->group(function () {
         Route::get('/room-service', 'show')->name('room-service');
         Route::get('/room-service/orders', 'index')->name('orders.index');
         Route::post('/room-service/orders', 'store')->name('orders.store');
-        Route::delete('/room-service/orders', 'destroy')->name('orders.destroy');
-        Route::put('/room-service/orders', 'update')->name('orders.update');
+        Route::delete('/room-service/orders/{id}', 'destroy')->name('orders.destroy');
+        Route::put('/room-service/orders/{id}', 'update')->name('orders.update');
     });
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
