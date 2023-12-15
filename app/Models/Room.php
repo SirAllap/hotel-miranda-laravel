@@ -70,17 +70,8 @@ class Room extends Model
             ->first();
     }
 
-    public static function apply_discount_multiple_rooms($rooms)
+    public function apply_discount()
     {
-        foreach ($rooms as &$room) {
-            $room['priceWithDiscount'] = intval($room['price'] - ($room['price'] * ($room['discount'] / 100)));
-        }
-        return $rooms;
-    }
-
-    public static function apply_discount_single_room($room)
-    {
-        $room['priceWithDiscount'] = intval($room['price'] - ($room['price'] * ($room['discount'] / 100)));
-        return $room;
+        return $this->priceWithDiscount = intval($this->price - ($this->price * ($this->discount / 100)));
     }
 }

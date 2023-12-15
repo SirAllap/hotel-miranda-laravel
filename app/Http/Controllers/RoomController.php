@@ -19,7 +19,9 @@ class RoomController extends Controller
             ->limit(10)
             ->get();
 
-        $rooms = Room::apply_discount_multiple_rooms($rooms);
+        foreach ($rooms as $room) {
+            $room->apply_discount();
+        }
 
         return view('index', ['rooms' => $rooms]);
     }
@@ -40,7 +42,10 @@ class RoomController extends Controller
                 ->get();
         }
 
-        $rooms = Room::apply_discount_multiple_rooms($rooms);
+        foreach ($rooms as $room) {
+            $room->apply_discount();
+        }
+
 
         return view('rooms', ['rooms' => $rooms]);
     }
@@ -89,7 +94,7 @@ class RoomController extends Controller
                 ->get();
 
             if (isset($room['discount'])) {
-                $room = Room::apply_discount_single_room($room);
+                $room->apply_discount();
             }
 
             return view('room-details', ['room' => $room, 'rooms' => $rooms, 'start' => $trip_start, 'end' => $trip_end]);
@@ -114,7 +119,9 @@ class RoomController extends Controller
             ->inRandomOrder()
             ->get();
 
-        $roomsWithDiscounts = Room::apply_discount_multiple_rooms($roomsWithDiscounts);
+        foreach ($roomsWithDiscounts as $room) {
+            $room->apply_discount();
+        }
 
         return view('offers', ['roomsWithDiscounts' => $roomsWithDiscounts, 'roomsWithoutDiscounts' => $roomsWithoutDiscounts]);
     }
