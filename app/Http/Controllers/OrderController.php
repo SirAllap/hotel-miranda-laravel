@@ -69,20 +69,17 @@ class OrderController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request)
+    public function update(Request $request, string $id)
     {
-        $id = $request->input('order_id');
-        $order = Order::find($id);
-        $order->update($request->all());
+        $order = Order::find($id)->update($request->all());
         return redirect('room-service/orders');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Request $request)
+    public function destroy(string $id)
     {
-        $id = $request->input('order_id');
         Order::destroy($id);
         return redirect('room-service/orders');
     }
