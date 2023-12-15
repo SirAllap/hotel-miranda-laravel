@@ -36,16 +36,17 @@ Route::controller(ContactController::class)->group(function () {
 });
 
 
-Route::get('/room-service', [OrderController::class, 'show'])->middleware(['auth', 'verified'])->name('room-service');
 
-Route::controller(OrderController::class)->group(function () {
-    Route::get('/room-service/orders', 'index')->middleware(['auth', 'verified'])->name('orders');
-    Route::post('/room-service/orders', 'store')->middleware(['auth', 'verified'])->name('orders');
-    Route::delete('/room-service/orders', 'destroy')->middleware(['auth', 'verified'])->name('orders');
-    Route::put('/room-service/orders', 'update')->middleware(['auth', 'verified'])->name('orders');
-});
 
 Route::middleware('auth')->group(function () {
+    // Route::resource('/room-service');
+    Route::controller(OrderController::class)->group(function () {
+        Route::get('/room-service', 'show')->name('room-service');
+        Route::get('/room-service/orders', 'index')->name('orders.index');
+        Route::post('/room-service/orders', 'store')->name('orders.store');
+        Route::delete('/room-service/orders', 'destroy')->name('orders.destroy');
+        Route::put('/room-service/orders', 'update')->name('orders.update');
+    });
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
