@@ -20,6 +20,11 @@ class OrderController extends Controller
             ->join('guests as g', 'orders.user_id', '=', 'g.id')
             ->select('g.room_number', 'orders.*')
             ->get();
+
+        // $orders = Order::where('user_id', $id)
+        //     ->with('guests')
+        //     ->get();
+
         return view('orders', ['orders' => $orders]);
     }
 
