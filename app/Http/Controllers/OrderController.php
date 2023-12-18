@@ -21,10 +21,6 @@ class OrderController extends Controller
             ->select('g.room_number', 'orders.*')
             ->get();
 
-        // $orders = Order::where('user_id', $id)
-        //     ->with('guests')
-        //     ->get();
-
         return view('orders', ['orders' => $orders]);
     }
 
