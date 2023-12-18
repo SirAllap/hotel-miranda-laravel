@@ -1,19 +1,20 @@
-name: Deploy to AWS EC2 using GitHub Actions
+name: Push-to-EC2
 
-on:
-  push:
-  
+on: push
+
 jobs:
   deploy:
-    name: Deploy to EC2
+    name: Push to EC2 Instance
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout the files
-        uses: actions/checkout@v2
-      - name: Deploy to Server 1
+      - name: Checkout the code
+        uses: actions/checkout@v1
+      - name: Deploy to Server
         uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
-          REMOTE_HOST: ${{ secrets.HOST_DNS }}
-          REMOTE_USER: ${{ secrets.USERNAME }}
-          TARGET: ${{ secrets.TARGET_DIR }}
+          SOURCE: "./"
+          REMOTE_HOST: "ec2-13-38-229-168.eu-west-3.compute.amazonaws.com"
+          REMOTE_USER: "ubuntu"
+          TARGET: "/var/www/hotel-miranda-laravel/"
