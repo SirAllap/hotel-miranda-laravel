@@ -8,19 +8,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-      - name: Install Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18.x'
-      - name: Install npm dependencies
-        run: npm install
-      - name: Run build task
-        run: npm run build --if-present
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@main
         env:
-          SCRIPT_BEFORE: "sudo chown -R ubuntu:ubuntu /var/www/hoel-mirantda-laravel/"
+          SCRIPT_BEFORE: "sudo chown -R ubuntu:ubuntu /var/www/hotel-miranda-laravel/"
           SCRIPT_AFTER: "sudo chown -R www-data:www-data /var/www/hotel-miranda-laravel/"
           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
           REMOTE_HOST: "ec2-13-38-229-168.eu-west-3.compute.amazonaws.com"
