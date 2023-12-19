@@ -10,7 +10,7 @@
 				THE ULTIMATE LUXURY EXPERIENCE
 			</h5>
 			<h1 class="home-intro__text big-title">
-				The Perfect Base For You
+				The Perfect Base For Your ass
 			</h1>
 		</section>
 		<section class="home-intro__button-section">
