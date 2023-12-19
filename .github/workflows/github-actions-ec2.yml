@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@main
-        env:
+        with:
           SCRIPT_BEFORE: "sudo chown -R ubuntu:ubuntu /var/www/hotel-miranda-laravel/"
           SCRIPT_AFTER: "sudo chown -R www-data:www-data /var/www/hotel-miranda-laravel/"
           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
