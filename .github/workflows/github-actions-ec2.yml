@@ -25,6 +25,6 @@ jobs:
           SCRIPT_BEFORE: "sudo chown -R ubuntu:ubuntu /var/www/hotel-miranda-laravel/"
           SCRIPT_AFTER: "sudo chown -R www-data:www-data /var/www/hotel-miranda-laravel/"
           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
-          REMOTE_HOST: "ec2-13-38-229-168.eu-west-3.compute.amazonaws.com"
+          REMOTE_HOST: "ec2-13-38-117-224.eu-west-3.compute.amazonaws.com"
           REMOTE_USER: "ubuntu"
           TARGET: "/var/www/hotel-miranda-laravel/"
