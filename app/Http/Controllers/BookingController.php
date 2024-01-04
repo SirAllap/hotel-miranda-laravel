@@ -26,9 +26,8 @@ class BookingController extends Controller
 
         Booking::create($request->all());
 
-        $confirmation = 'Thank you for your request. We have received it correctly. Someone from our Team will get back to you very soon.';
+        $confirmation = ['Thank you for your request. We have received it correctly. Someone from our Team will get back to you very soon.'];
         $error = false;
-        return redirect('/')
-            ->with(['confirmation' => $confirmation, 'error' => $error]);
+        return redirect('/')->with(['confirmation' => $confirmation, 'error' => $error]);
     }
 }

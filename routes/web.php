@@ -35,11 +35,7 @@ Route::controller(ContactController::class)->group(function () {
     Route::post('/contact', 'store')->name('contact');
 });
 
-
-
-
 Route::middleware('auth')->group(function () {
-    // Route::resource('/room-service');
     Route::controller(OrderController::class)->group(function () {
         Route::get('/room-service', 'show')->name('room-service');
         Route::get('/room-service/orders', 'index')->name('orders.index');
